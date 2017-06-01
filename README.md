@@ -1,2 +1,5 @@
-# Bora_Lora_Kit
-Fabrication files and software for the Air quality sensor Bora Lora
+# Air quality sensor kit
+In this repo there are the documentation, source files and code of the air quality sensor kits:
+- Bora kit
+- Bora Lora kit
+- rIoT
