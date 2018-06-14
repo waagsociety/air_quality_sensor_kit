@@ -4,6 +4,7 @@ This repo contains documentation, source files and code for the following air qu
 - Bora kit
 - Bora Lora kit
 - rIoT
+- Responsive bird
 
 ### Bora kit
 Air Quality Sensor for the Amsterdam Smart Citizens Lab, measures NO2, dust, temperature and humidity. Developed for a pilot in 2016 to measure air quality around the Valkenburgerstraat and Weesperstraat, under the name [Urban AirQ](http://waag.org/en/project/urban-airq). Citizens actively participated in the measuring process.
