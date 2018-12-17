@@ -3,8 +3,7 @@ The kit developed for MUV is a modular system on which the following sensors can
 * dust sensor
 * temperature/humidity/pressure sensor
 * noise sensor
-* nitrogen dioxide sensor
-* ozone sensor
+* gases sensors
 
 
 The pcbs used in the kit are both off-the-shelf products and produced in the fablab.
@@ -51,3 +50,45 @@ Temperature coefficient offset: ±1.5 Pa/K (equiv. to ±12.6 cm at 1°C temperat
 
 
 It uses I2C or SPI communication interface, in the kit it adopts the first one.
+
+## Noise sensor
+The microphone included in the kit is the [ICS‐43432](https://www.invensense.com/wp-content/uploads/2015/02/ICS-43432-data-sheet-v1.3.pdf) from [Invensense](https://www.invensense.com/products/ics-43434/) and it features:
+
+* Digital I²S Interface with High Precision 24‐bit Data  
+* High 65 dBA SNR
+* −26 dB FS Sensitivity
+* ±1 dB Sensitivity Tolerance
+* Wide Frequency Response from 50 Hz to 20 kHz
+* Low Current Consumption: 1.0 mA
+* High Power Supply Rejection: −80 dB FS
+* 116 dB SPL Acoustic Overload Point
+* Small 4 mm × 3 mm × 1 mm Surface‐Mount Package
+* Compatible with Sn/Pb and Pb‐Free Solder Processes  
+* RoHS/WEEE Compliant  
+
+this sensor has its own dedicated mcu that is capable to run 44100 Khz sample frequency and I2S interface. the board is the Adafruit feather M0 basic, see hardware. XXX
+
+## Gas sensors
+the kit is designed to read up to two electro-chimical sensors from [Alphasense](http://www.alphasense.com/).
+Two are the sensors that are recommended:
+- Nitrogen dioxide
+- Ozone
+
+### NO2 sensor
+The sensor is the NO2-B43F embedded on the [ISB individual sensor board](http://www.alphasense.com/index.php/air/downloads/) from Alphasense. The specifications of sensor are:
+- Sensitivity nA/ppm at 2ppm No2 : -175 to -450
+- Response time t90 (s) from zero to 2ppm NO2: < 60
+- Zero current  nA in zero air at 20°C :  -50 to +70
+- Noise* ±2 standard deviations (ppb equivalent) : 15
+- Range  ppm NO limit of performance warranty : 20
+- Linearity ppb error at full scale, linear at zero and 5ppm NO2 : < ±0.5
+- Overgas limit maximum ppm for stable response to gas pulse : 50
+
+<p align="center"><img src="images/no2_performances.png">
+
+
+### O3 sensor
+
+
+## Calibration
+The dust and the gas sensors requires a calibration process to validate the data.
