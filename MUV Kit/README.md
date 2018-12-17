@@ -71,8 +71,8 @@ This sensor has its own dedicated mcu that is capable to run 44100 Khz sample fr
 ## Gas sensors
 the kit is designed to read up to two electro-chimical sensors from [Alphasense](http://www.alphasense.com/).
 Two are the sensors that are recommended:
-- Nitrogen dioxide
-- Ozone
+- [Nitrogen dioxide](http://www.alphasense.com/index.php/products/nitrogen-dioxide-2/)
+- [Ozone](http://www.alphasense.com/index.php/products/ozone-2/)
 
 ### NO2 sensor
 The sensor is the NO2-B43F embedded on the [ISB individual sensor board](http://www.alphasense.com/index.php/air/downloads/) from Alphasense. The specifications of sensor are:
@@ -88,7 +88,7 @@ The sensor is the NO2-B43F embedded on the [ISB individual sensor board](http://
 
 
 ### O3 sensor
-The [OX-A431](http://www.alphasense.com/WEB1213/wp-content/uploads/2018/12/OXA431.pdf) specifications are:
+The [OX-B431](http://www.alphasense.com/WEB1213/wp-content/uploads/2018/12/OXB431.pdf) specifications are:
 - Sensitivity nA/ppm at 1ppm O3 : -200 to -650
 - Response time t90 (s) from zero to 1ppm O3 :
 < 45
