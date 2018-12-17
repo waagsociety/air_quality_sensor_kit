@@ -66,7 +66,7 @@ The microphone included in the kit is the [ICS‐43432](https://www.invensense.c
 * Compatible with Sn/Pb and Pb‐Free Solder Processes  
 * RoHS/WEEE Compliant  
 
-this sensor has its own dedicated mcu that is capable to run 44100 Khz sample frequency and I2S interface. the board is the Adafruit feather M0 basic, see hardware. XXX
+This sensor has its own dedicated mcu that is capable to run 44100 Khz sample frequency and I2S interface. The board is the Adafruit feather M0 basic, see hardware. XXX
 
 ## Gas sensors
 the kit is designed to read up to two electro-chimical sensors from [Alphasense](http://www.alphasense.com/).
@@ -88,7 +88,29 @@ The sensor is the NO2-B43F embedded on the [ISB individual sensor board](http://
 
 
 ### O3 sensor
+The [OX-A431](http://www.alphasense.com/WEB1213/wp-content/uploads/2018/12/OXA431.pdf) specifications are:
+- Sensitivity nA/ppm at 1ppm O3 : -200 to -650
+- Response time t90 (s) from zero to 1ppm O3 :
+< 45
+- Zero current nA in zero air at 20°C : -70 to 70
+- Noise* ±2 standard deviations (ppb equivalent) : 15
+- Range ppm O3 limit of performance warranty : 20
+- Linearity ppm error at full scale, linear at zero and 20ppm O3 : < ±0.5
+- Overgas limit maximum ppm for stable response to gas pulse : 50
+
+<p align="center"><img src="images/o3_performances.png">
+
+Also in this case, the sensor uses the ISB individual sensor board.
+
 
 
 ## Calibration
-The dust and the gas sensors requires a calibration process to validate the data.
+The dust and the gas sensors require a calibration process to validate the data.
+In the case of the dust sensor is recommended to execute the comparison of the SDS011 sensor with professional stations before the employment of the kit in the field of application. <br>
+The gas sensors require more sophisticated process.
+The workflow for a proper calibration has several steps, depending on the duration of the measurement time. Before to place the sensors in the field, it is necessary to execute a calibration closed to a professional station, the duration depends on the weather conditions, it can take up to one month. After the first calibration the sensors can be placed in the field and during the measurements time the data should be submitt to "on-fly calibration", continuous calibration during the night. At the end of the measuring time or after 6 month, it is recommended a second round of calibration at professional station.
+To have more information about the calibration, please see [contacts](Contacts)
+
+## Contacts
+You can leave your comments or questions in the issue section of this repo.
+If you have question about calibration, please contact: XXX
