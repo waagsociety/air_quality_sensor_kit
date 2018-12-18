@@ -1,6 +1,6 @@
 # Air quality sensor kit for MUV
 
-<p align="center"><img src="images/sensor_kit.jpg" width="300"></p> 
+<p align="center"><img src="images/sensor_kit.jpg" width="300"></p>
 
 The kit developed for MUV is a modular system on which the following sensors can be attached:
 * dust sensor
@@ -12,7 +12,9 @@ The kit developed for MUV is a modular system on which the following sensors can
 The pcbs used in the kit are both off-the-shelf products and produced in the fablab.
 
 ## Dust sensor
-The dust sensor is the [SDS011](http://aqicn.org/sensor/sds011/) from [inovafitness](http://inovafitness.com/en/a/chanpinzhongxin/95.html) and it uses the principle of laser scattering technology. The device is capable to measure the concentration of PM2.5, nominally it measures also PM10 but research papers shows the fact that the PM10 measurement is an extrapolation based on PM2.5 data.
+The dust sensor is the [SDS011](http://aqicn.org/sensor/sds011/) from [inovafitness](http://inovafitness.com/en/a/chanpinzhongxin/95.html) and it uses the principle of laser scattering technology.
+<p align="center"><img src="images/sds011.jpg" width="300"></p>
+The device is capable to measure the concentration of PM2.5, nominally it measures also PM10 but research papers shows the fact that the PM10 measurement is an extrapolation based on PM2.5 data.
 Based on such results we will use the sensor to measure only PM2.5. The communication between the sensor and the main mcu is over serial.
 
 The specifications are:
