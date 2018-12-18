@@ -1,6 +1,6 @@
 # Air quality sensor kit for MUV
 
-<p align="center"><img src="images/sensor_kit.jpg" width="300"></p>
+<p align="center"><img src="images/sensor_kit.jpg" width="400"></p>
 
 The kit developed for MUV is a modular system on which the following sensors can be attached:
 * dust sensor
@@ -85,7 +85,7 @@ Two are the sensors that are recommended:
 
 ### NO2 sensor
 The sensor is the NO2-B43F embedded on the [ISB individual sensor board](http://www.alphasense.com/index.php/air/downloads/) from Alphasense.
-<p align="center"><img src="images/no2_front.jpg" width="300"><img src="images/no2_back.jpg" width="300"><br><img src="images/no2.jpg" width="300">
+<p align="center"><img src="images/no2_front.jpg" width="300"><img src="images/no2_back.jpg" width="300"><img src="images/no2.jpg" width="300">
 </p>
 
 The specifications of sensor are:
