@@ -5,6 +5,10 @@
 | ------------- | ------------- |
 | <p align="center"><img src="images/sensors_pcb_top.JPG"></p>  | <p align="center"><img src="images/sensors_pcb_bottom.jpg"></p> |
 
+
+
+
+
 #### Interface pcb
 
 #### Temp/Hum pcb
