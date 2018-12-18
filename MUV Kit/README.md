@@ -100,7 +100,7 @@ The [OX-B431](http://www.alphasense.com/WEB1213/wp-content/uploads/2018/12/OXB43
 
 <p align="center"><img src="images/o3_performances.png">
 
-Also in this case, the sensor uses the ISB individual sensor board.
+Also in this case, the sensor in the kit uses the ISB individual sensor board.
 
 
 
