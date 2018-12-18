@@ -1,6 +1,6 @@
 # Air quality sensor kit for MUV
 
-<p align="center"><img src="images/sensor_kit.jpg" width="400"></p>
+<p align="center"><img src="images/sensor_kit.jpg" width="500"></p>
 
 The kit developed for MUV is a modular system on which the following sensors can be attached:
 * dust sensor
