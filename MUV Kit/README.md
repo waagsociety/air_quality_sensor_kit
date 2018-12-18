@@ -33,7 +33,9 @@ The specifications are:
 The dust sensor doesn't need any support pcb, the cable you get with the sensor can be used to plug the device to the main sensors board, see hardware XXX.
 
 ## Temp/Hum/Pressure sensor
-To measure temperature and humidity, the kit include the [BME280 sensor](https://www.bosch-sensortec.com/bst/products/all_products/bme280). The operation ranges are:<br>
+To measure temperature and humidity, the kit include the [BME280 sensor](https://www.bosch-sensortec.com/bst/products/all_products/bme280).
+<p align="center"><img src="images/bme280_front.jpg" width="200"><img src="images/bme280_back.jpg" width="200"></p>
+The operation ranges are:<br>
 Pressure: 300...1100 hPa<br>
 Temperature: -40…85°C<br>
 
@@ -59,6 +61,8 @@ It uses I2C or SPI communication interface, in the kit it adopts the first one.
 ## Noise sensor
 The microphone included in the kit is the [ICS‐43432](https://www.invensense.com/wp-content/uploads/2015/02/ICS-43432-data-sheet-v1.3.pdf) from [Invensense](https://www.invensense.com/products/ics-43434/) and it features:
 
+<p align="center"><img src="images/ics43432.jpg" width="200"></p>
+
 * Digital I²S Interface with High Precision 24‐bit Data  
 * High 65 dBA SNR
 * −26 dB FS Sensitivity
@@ -80,7 +84,11 @@ Two are the sensors that are recommended:
 - [Ozone](http://www.alphasense.com/index.php/products/ozone-2/)
 
 ### NO2 sensor
-The sensor is the NO2-B43F embedded on the [ISB individual sensor board](http://www.alphasense.com/index.php/air/downloads/) from Alphasense. The specifications of sensor are:
+The sensor is the NO2-B43F embedded on the [ISB individual sensor board](http://www.alphasense.com/index.php/air/downloads/) from Alphasense.
+<p align="center"><img src="images/no2_front.jpg" width="200"><img src="images/no2_back.jpg" width="200"><br><img src="images/no2.jpg" width="200">
+</p>
+
+The specifications of sensor are:
 - Sensitivity nA/ppm at 2ppm No2 : -175 to -450
 - Response time t90 (s) from zero to 2ppm NO2: < 60
 - Zero current  nA in zero air at 20°C :  -50 to +70
