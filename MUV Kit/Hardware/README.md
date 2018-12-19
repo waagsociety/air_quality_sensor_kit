@@ -28,11 +28,14 @@
 #### Noise pcb
 | top view  | bottom view |
 | ------------- | ------------- |
-| <img src="images/noise_pcb_top.jpg">  | <<img src="images/noise_pcb_bottom.jpg">|
+| <img src="images/noise_pcb_top.jpg">  | <img src="images/noise_pcb_bottom.jpg">|
 
 
-## Modules
+## Modules and assembly
 #### Central module
+| <img src="images/central_module_1.jpg" width="250"> | |
+| ------------- | ------------- |
+| <img src="images/central_module_2.jpg" width="250"> | |
 
 #### Temp/Hum module
 
@@ -41,4 +44,4 @@
 #### Noise module
 
 
-## Assmebly
+## Assembly
