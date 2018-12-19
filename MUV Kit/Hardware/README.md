@@ -81,4 +81,5 @@
 | ------------- | ------------- |
 | <img src="images/noise_module_2.jpg" width="300"> | |
 
-#### General Assembly
+#### Final Assembly
+<img src="images/final_assembly.jpg">
