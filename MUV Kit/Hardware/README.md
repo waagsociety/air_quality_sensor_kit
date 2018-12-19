@@ -3,28 +3,28 @@
 #### Sensors pcb
 | top view  | bottom view |
 | ------------- | ------------- |
-| <img src="images/sensors_pcb_top.jpg">  | <<img src="images/sensors_pcb_bottom.jpg">|
+| <img src="images/sensors_pcb_top.jpg" width="300">  | <<img src="images/sensors_pcb_bottom.jpg" width="300">|
 
 #### Interface pcb
 | top view  | bottom view |
 | ------------- | ------------- |
-| <img src="images/interface_pcb_top.jpg">  | <<img src="images/interface_pcb_bottom.jpg">|
+| <img src="images/interface_pcb_top.jpg"  width="300">  | <img src="images/interface_pcb_bottom.jpg"  width="300">|
 
 #### Temp/Hum pcb
 | top view  | bottom view |
 | ------------- | ------------- |
-| <img src="images/bme_pcb_top.jpg">  | <<img src="images/bme_pcb_bottom.jpg">|
+| <img src="images/bme_pcb_top.jpg"  width="300">  | <<img src="images/bme_pcb_bottom.jpg"  width="300">|
 
 
 #### Gas pcb
 | top view  | bottom view |
 | ------------- | ------------- |
-| <img src="images/gas_pcb_top.jpg">  | <<img src="images/gas_pcb_bottom.jpg">|
+| <img src="images/gas_pcb_top.jpg"  width="300">  | <<img src="images/gas_pcb_bottom.jpg"  width="300">|
 
 #### Noise pcb
 | top view  | bottom view |
 | ------------- | ------------- |
-| <img src="images/noise_pcb_top.jpg">  | <img src="images/noise_pcb_bottom.jpg">|
+| <img src="images/noise_pcb_top.jpg"  width="300">  | <img src="images/noise_pcb_bottom.jpg"  width="300">|
 
 ## Off-the-shelf pcbs
 | <img src="images/feather_M0_1.jpg" width="300"> |<img src="images/feather_M0_2.jpg" width="300"> |
