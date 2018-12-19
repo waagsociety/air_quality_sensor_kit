@@ -3,7 +3,7 @@
 #### Sensors pcb
 | top view  | bottom view |
 | ------------- | ------------- |
-| <img src="images/sensors_pcb_top_view.png" width="300">  | Q1/Q2 : BSS138 mosfet <br> R1/R2/R3/R4 : 10 Kohm <br><img src="images/sensors_pcb_bottom_view.png" width="300">|
+| <img src="images/sensors_pcb_top_view.png" width="300">  | <img src="images/sensors_pcb_bottom_view.png" width="300"> <br> Q1/Q2 : BSS138 mosfet <br> R1/R2/R3/R4 : 10 Kohm <br>|
 | <img src="images/sensors_pcb_top.jpg" width="300">  | <img src="images/sensors_pcb_bottom.jpg" width="300">|
 
 #### Interface pcb
