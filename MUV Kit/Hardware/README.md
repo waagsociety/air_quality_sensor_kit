@@ -19,7 +19,10 @@ Depending on the sensors you want you use you can solder the required sockets. T
 #### Temp/Hum pcb
 | top view  | bottom view |
 | ------------- | ------------- |
-| <img src="images/bme_pcb_top.jpg"  width="300">  | <img src="images/bme_pcb_bottom.jpg"  width="300">|
+| <img src="images/bm2_pcb_top_view.png"  width="300">  | <img src="images/bm2_pcb_bottom_view.png"  width="300">|
+| Components placed on the top layer <br> <img src="images/bme_pcb_top.jpg"  width="300">  | Components placed on the bottom layer <br> <img src="images/bme_pcb_bottom.jpg"  width="300">|
+
+The temp/hum pcb is a 2 layers board, the vias can be filled in with solid core wire (diameter < 0.8 mm). More information about the production of a double side pcb are in the [Double side milling]() section.
 
 
 #### Gas pcb
