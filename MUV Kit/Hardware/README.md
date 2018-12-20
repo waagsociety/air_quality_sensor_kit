@@ -20,20 +20,22 @@ Depending on the sensors you want you use you can solder the required sockets. T
 | top view  | bottom view |
 | ------------- | ------------- |
 | <img src="images/bm2_pcb_top_view.png"  width="300">  | <img src="images/bm2_pcb_bottom_view.png"  width="300">|
-| Components placed on the top layer <br> <img src="images/bme_pcb_top.jpg"  width="300">  | Components placed on the bottom layer <br> <img src="images/bme_pcb_bottom.jpg"  width="300">|
+| Components placed on the top layer <br> <img src="images/bme_pcb_top.jpg"  width="300">  <br> J3: female THT 1x6 pin header, 2.54pitch| Components placed on the bottom layer <br> <img src="images/bme_pcb_bottom.jpg"  width="300"> <br> J1: Grove - Universal 4 Pin connector|
 
-The temp/hum pcb is a 2 layers board, the vias can be filled in with solid core wire (diameter < 0.8 mm). More information about the production of a double side pcb are in the [Double side milling]() section.
+The temp/hum pcb is a 2 layers board, the vias can be filled in with solid core wire (diameter < 0.8 mm). More information about the production of a double side pcb are in the [Double side milling](https://github.com/waagsociety/air_quality_sensor_kit/tree/master/MUV%20Kit/Hardware/Double%20side%20milling) section.
 
 
 #### Gas pcb
 | top view  | bottom view |
 | ------------- | ------------- |
-| <img src="images/gas_pcb_top.jpg"  width="300">  | <img src="images/gas_pcb_bottom.jpg"  width="300">|
+| <img src="images/gas_pcb_top_view.png"  width="300">  | <img src="images/gas_pcb_bottom_view.png"  width="300">|
+| Components placed on the top layer <br> <img src="images/gas_pcb_top.jpg"  width="300">  | Components placed on the bottom layer <br> <img src="images/gas_pcb_bottom.jpg"  width="300">|
 
 #### Noise pcb
 | top view  | bottom view |
 | ------------- | ------------- |
-| <img src="images/noise_pcb_top.jpg"  width="300">  | <img src="images/noise_pcb_bottom.jpg"  width="300">|
+| <img src="images/noise_pcb_top_view.png"  width="300">  | |
+| Components placed on the top layer <br> <img src="images/noise_pcb_top.jpg"  width="300">  | <img src="images/noise_pcb_bottom.jpg"  width="300">|
 
 ## Off-the-shelf pcbs
 
