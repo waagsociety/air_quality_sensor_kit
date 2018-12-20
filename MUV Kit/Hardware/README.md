@@ -13,7 +13,8 @@ Depending on the sensors you want you use you can solder the required sockets. T
 #### Interface pcb
 | top view  | bottom view |
 | ------------- | ------------- |
-|<img src="images/interface_pcb_top.jpg"  width="300">  | <img src="images/interface_pcb_bottom.jpg"  width="300">|
+|<img src="images/interface_pcb_top_view.png"  width="300">  | |
+|Components placed on the top layer <br> <img src="images/interface_pcb_top.jpg"  width="300">  <br> SW_RST, SW_CONFIG: push button, smd, 6mm <br> LED1: WS2812B smd <br> R1: 10K res, smd, 1206 <br> R2: 470 ohm res, smd, 1206 <br> C1: 0.1uF cap, smd, 1206| Components placed on the top layer <br> <img src="images/interface_pcb_bottom.jpg"  width="300"> <br> JP3: female THT 1x12 pin header, 2.54pitch <br> JP1: female THT 1x16 pin header 2.54pitch <br><br><br><br>|
 
 #### Temp/Hum pcb
 | top view  | bottom view |
