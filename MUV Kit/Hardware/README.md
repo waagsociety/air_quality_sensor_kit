@@ -38,7 +38,7 @@ Note: this board can be used for both NO2 and O3 sensor but it is necessary to s
 | top view  | bottom view |
 | ------------- | ------------- |
 | <img src="images/noise_pcb_top_view.png"  width="300">  | |
-| Components placed on the top layer <br> <img src="images/noise_pcb_top.jpg"  width="300"> <br> J1: Grove - Universal 4 Pin connector <br> OTS1_short: female THT 1x12 pin header, 2.54pitch <br> OTS1_long: female THT 1x16 pin header, 2.54pitch | There are no somponent placed on the bottom layer <br> <img src="images/noise_pcb_bottom.jpg"  width="300">|
+| Components placed on the top layer <br> <img src="images/noise_pcb_top.jpg"  width="300"> <br> J1: Grove - Universal 4 Pin connector <br> OTS1_short: female THT 1x12 pin header, 2.54pitch <br> OTS1_long: female THT 1x16 pin header, 2.54pitch | There are no somponent placed on the bottom layer <br> <img src="images/noise_pcb_bottom.jpg"  width="300"> <br><br><br><br>|
 
 ## Off-the-shelf pcbs
 
