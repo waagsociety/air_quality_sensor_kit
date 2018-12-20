@@ -29,16 +29,16 @@ The temp/hum pcb is a 2 layers board, the vias can be filled in with solid core 
 | top view  | bottom view |
 | ------------- | ------------- |
 | <img src="images/gas_pcb_top_view.png"  width="300">  | <img src="images/gas_pcb_bottom_view.png"  width="300">|
-| Components placed on the top layer <br> <img src="images/gas_pcb_top.jpg"  width="300">  | Components placed on the bottom layer <br> <img src="images/gas_pcb_bottom.jpg"  width="300">|
+| Components placed on the top layer <br> <img src="images/gas_pcb_top.jpg"  width="300">  <br> J2: Grove - Universal 4 Pin connector <br> JP1: female THT 1x10 pin header, 2.54pitch <br><br>| Components placed on the bottom layer <br> <img src="images/gas_pcb_bottom.jpg"  width="300"> <br> R1 or R2: 0 ohm resistor, smd, 1206 <br> C1: 100nF capacitor, smd, 1206 <br> C2: 1uF capacitor, smd, 1206 |
 
-Note: this board can be used for both NO2 and O3 sensor but it is necessary to solder the zero ohm resistor a different place. For the NO2 sensor the zero ohm resistor must be placed on R1, for the O3 sensor the zero ohm resistor must be placed on R2.
+Note: this board can be used for both NO2 and O3 sensor but it is necessary to solder the zero ohm resistor in the different places depending on the gas. For the NO2 sensor the zero ohm resistor must be placed on R1, for the O3 sensor the zero ohm resistor must be placed on R2.
 
 
 #### Noise pcb
 | top view  | bottom view |
 | ------------- | ------------- |
 | <img src="images/noise_pcb_top_view.png"  width="300">  | |
-| Components placed on the top layer <br> <img src="images/noise_pcb_top.jpg"  width="300">  | <img src="images/noise_pcb_bottom.jpg"  width="300">|
+| Components placed on the top layer <br> <img src="images/noise_pcb_top.jpg"  width="300"> <br> J1: Grove - Universal 4 Pin connector <br> OTS1_short: female THT 1x12 pin header, 2.54pitch <br> OTS1_long: female THT 1x16 pin header, 2.54pitch | There are no somponent placed on the bottom layer <br> <img src="images/noise_pcb_bottom.jpg"  width="300">|
 
 ## Off-the-shelf pcbs
 
