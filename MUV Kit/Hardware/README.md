@@ -31,6 +31,9 @@ The temp/hum pcb is a 2 layers board, the vias can be filled in with solid core 
 | <img src="images/gas_pcb_top_view.png"  width="300">  | <img src="images/gas_pcb_bottom_view.png"  width="300">|
 | Components placed on the top layer <br> <img src="images/gas_pcb_top.jpg"  width="300">  | Components placed on the bottom layer <br> <img src="images/gas_pcb_bottom.jpg"  width="300">|
 
+Note: this board can be used for both NO2 and O3 sensor but it is necessary to solder the zero ohm resistor a different place. For the NO2 sensor the zero ohm resistor must be placed on R1, for the O3 sensor the zero ohm resistor must be placed on R2.
+
+
 #### Noise pcb
 | top view  | bottom view |
 | ------------- | ------------- |
