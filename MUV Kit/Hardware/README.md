@@ -67,21 +67,38 @@ The feather esp8266 requires female stacking headers so it can be plugged on the
 
 #### Adafruit Feather RTC and SD-card
 The [Adalogger FeatherWing - RTC + SD](https://learn.adafruit.com/adafruit-adalogger-featherwing/overview) is compatible with the feather esp8266 and it features:
-* an I2C real time clock (PCF8523) with 32KHz crystal and battery backup
+* an I2C real time clock (PCF8523) with 32KHz crystal and battery backup.
 * microSD socket that connects to the SPI port pins. A CR1220 coin cell is required to use the RTC battery-backup capabilities.
 
-As for the feather esp8266, it can be used in the kit, with the female stacking headers that don't come with the board but they must be separately bought and soldered.
+As for the feather esp8266, it needs the female stacking headers that don't come with the board but they must be separately bought and soldered.
 
  <p align="center"> <img src="images/sd_rtc.jpg" width="200"> </p>
 
 
 #### BME280 breakout board
-| <img src="images/bme.jpg" width="300"> ||
-| ------------- | ------------- |
+The [bme280](https://www.bosch-sensortec.com/bst/products/all_products/bme280) sensor is so small (2.5x2.5 mm) that it is easier to work with its breakout board. The sensor works at 3.3V and it can communicate directly with the feather esp8266 that is also run at 3.3V, it means no need of level shifters between the two. Depending on where you buy the device, the board could already have the pin header, otherwise it is necessary to solder a 1x6 male header, 2.54mm pitch.
+
+<p align="center"><img src="images/bme.jpg" width="200">
+</p>
 
 #### ADS1115 breakout board
-| <img src="images/ads1115.jpg" width="300"> ||
-| ------------- | ------------- |
+The [ADS1115 board](https://learn.adafruit.com/adafruit-4-channel-adc-breakouts/) from Adafruit is the breakout board of the high-resolution Analog-to-Digital converter ADS1115. It is used in the reading of small voltages from the Gas sensors. The board can run from 2ßV up to 5V, in the kit it is supplied at 5V, same domain of the gas sensor, and it executes a two differential input readings.<br>
+The [ADS1115](http://www.ti.com/lit/ds/symlink/ads1115.pdf) features:
+* Resolution: 16 Bits
+* Programmable Sample Rate: 8 to 860 Samples/Second
+* Power Supply/Logic Levels: 2.0V to 5.5V
+* Low Current Consumption: Continuous Mode: Only 150µA * Single-Shot Mode: Auto Shut-Down
+* Internal Low-Drift Voltage Reference
+* Internal Oscillator
+* Internal PGA: up to x16
+* I2C Interface: 4-Pin-Selectable Addresses
+* Four Single-Ended or 2 Differential Inputs
+* Programmable Comparator  
+
+In the sensor kit, the ADS1115 board needs a 1x10 male pin header, pitch 2.54mm.
+
+<p align="center"> <img src="images/ads1115.jpg" width="200"> </p>
+
 
 #### Adafruit Feather M0 basic
 | <img src="images/feather_M0_1.jpg" width="300"> |<img src="images/feather_M0_2.jpg" width="300"> |
