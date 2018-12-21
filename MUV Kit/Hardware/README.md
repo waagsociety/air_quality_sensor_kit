@@ -43,6 +43,26 @@ Note: this board can be used for both NO2 and O3 sensor but it is necessary to s
 ## Off-the-shelf pcbs
 
 #### Adafruit Feather esp8266
+The [Adafruit Feather HUZZAH ESP8266](https://learn.adafruit.com/adafruit-feather-huzzah-esp8266?view=all) is an 'all-in-one' ESP8226 WiFi development board. The module can be supplied through USB cable with the following specifications:
+* Measures 2.0" x 0.9" x 0.28" (51mm x 23mm x 8mm) without headers soldered in
+* Light as a (large?) feather - 6 grams
+* ESP8266 @ 80MHz or 160 Mhz with 3.3V logic/power
+* 4MB of FLASH (32 Mbit)
+* 3.3V regulator with 500mA peak current output
+* CP2104 USB-Serial converter onboard with 921600 max baudrate for uploading
+* Auto-reset support for getting into bootload mode before firmware upload
+* 9 GPIO pins - can also be used as I2C and SPI
+* 1 x analog inputs 1.0V max
+* Pin #0 red LED for general purpose blinking. Pin #2 blue LED for bootloading debug & general purpose blinking
+* Power/enable pin
+* 4 mounting holes
+* Reset button<br>
+
+In this application the feather esp8266 is responsible to collect the measurements of the sensors and send them, via WiFi, to the dedicated server.
+When the Wifi network is not available it can save the data on a SD-card, embedded on a different pcb, see section below.
+
+The feather esp8266 requires female stacking headers so it can be plugged on the sensors pcb and it can host, on top, the RTC/SD-card pcb. The headers must be bought separately and they must be solder on the feather esp8266 board. 
+
 | <img src="images/feather_esp_1.jpg" width="300"> |<img src="images/feather_esp_2.jpg" width="300"> |
 | ------------- | ------------- |
 
