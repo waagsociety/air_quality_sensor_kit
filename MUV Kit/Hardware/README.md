@@ -163,4 +163,5 @@ The biggest advantage of this module is the I2S audio as a stream of 24-bit seri
 | ------------- | ------------- |
 
 #### Final Assembly
+The SDS011 sensor connects to the sensors pcb with its cable. All the other modules use Grove universal 4 pin wire. 
 <img src="images/final_assembly.jpg">
