@@ -144,28 +144,23 @@ The biggest advantage of this module is the I2S audio as a stream of 24-bit seri
 
 ## Modules and assembly
 #### Central module
-| <img src="images/central_module_1.jpg" width="300"> | |
+| <img src="images/central_module_1.jpg" width="300"> |<img src="images/central_module_2.jpg" width="300">  |
 | ------------- | ------------- |
-| <img src="images/central_module_2.jpg" width="300"> | |
-| <img src="images/central_module_3.jpg" width="300"> | |
-| <img src="images/central_module_4.jpg" width="300"> | |
+| <img src="images/central_module_3.jpg" width="300">|<img src="images/central_module_4.jpg" width="300"> |
 
 #### Temp/Hum module
-| <img src="images/temp_module_1.jpg" width="300"> | |
+| <img src="images/temp_module_1.jpg" width="300"> |<img src="images/temp_module_2.jpg" width="300"> |
 | ------------- | ------------- |
-| <img src="images/temp_module_2.jpg" width="300"> | |
+
 
 #### Gas module
-| <img src="images/gas_module_1.jpg" width="300"> | |
+| <img src="images/gas_module_1.jpg" width="300"> | <img src="images/gas_module_2.jpg" width="300"> |
 | ------------- | ------------- |
-| <img src="images/gas_module_2.jpg" width="300"> | |
-| <img src="images/gas_module_3.jpg" width="300"> | |
-| <img src="images/gas_module_4.jpg" width="300"> | |
+|  <img src="images/gas_module_3.jpg" width="300"> | <img src="images/gas_module_4.jpg" width="300"> |
 
 #### Noise module
-| <img src="images/noise_module_1.jpg" width="300"> | |
+| <img src="images/noise_module_1.jpg" width="300"> |<img src="images/noise_module_2.jpg" width="300"> |
 | ------------- | ------------- |
-| <img src="images/noise_module_2.jpg" width="300"> | |
 
 #### Final Assembly
 <img src="images/final_assembly.jpg">
