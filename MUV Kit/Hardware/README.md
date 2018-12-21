@@ -163,5 +163,14 @@ The biggest advantage of this module is the I2S audio as a stream of 24-bit seri
 | ------------- | ------------- |
 
 #### Final Assembly
-The SDS011 sensor connects to the sensors pcb with its cable. All the other modules use Grove universal 4 pin wire. 
+The SDS011 sensor connects to the sensors pcb with its cable. All the other modules use Grove - Universal 4 Pin Unbuckled 20cm Cable.
 <img src="images/final_assembly.jpg">
+
+### BOM notes
+Many items in the BOM can be bought only in minimum amount, when you actually are going to use one or two component. The total cost is therefore expressed as:
+* total purchase: the cost of the purchase, buying the minimum amount per items
+* cost of 1 kit: considering the cost of only the component used in the kit.
+
+for example: if you buy the "feather header 1" from Farnell, you have to buy 10 components even if you are going to use only one. In the purchase cost the item "feather header 1" is 12€ but in the single cost of one kit, the item value is 1,2€.
+
+The kit showed in this repo doesn't have the O3 sensor, but the you can find indication about the boards and how to connect it to the kit.
