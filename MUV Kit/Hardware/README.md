@@ -100,10 +100,37 @@ In the sensor kit, the ADS1115 board needs a 1x10 male pin header, pitch 2.54mm.
 <p align="center"> <img src="images/ads1115.jpg" width="200"> </p>
 
 
-#### Adafruit Feather M0 basic
-| <img src="images/feather_M0_1.jpg" width="300"> |<img src="images/feather_M0_2.jpg" width="300"> |
-| ------------- | ------------- |
-| <img src="images/feather_M0_3.jpg" width="300"> | <img src="images/feather_M0_4.jpg" width="300"> |
+#### Adafruit Feather M0 Basic Proto
+The Feather M0 Basic Proto has the ATSAMD21G18 ARM Cortex M0 processor as core, it clocked at 48MHz with 3,3V logic. Some specs:
+
+* Measures 2.0" x 0.9" x 0.28" (51mm x 23mm x 8mm) without headers soldered in
+* Light as a (large?) feather - 4.6 grams
+* ATSAMD21G18 @ 48MHz with 3.3V logic/power
+* 256KB of FLASH + 32KB of RAM
+* 32.768 Khz crystal for clock generation & RTC
+* 3.3V regulator with 500mA peak current output
+* USB native support, comes with USB bootloader and * serial port debugging
+* 20 GPIO pins
+* Hardware Serial, hardware I2C, hardware SPI support
+PWM outputs on all pins
+* 6 x 12-bit analog inputs
+* 1 x 10-bit analog output (DAC)
+* Built in 100mA lipoly charger with charging status indicator LED, not in used in sensor kit.
+* Pin #13 red LED for general purpose blinking
+* Power/enable pin
+* 4 mounting holes
+* Reset button
+
+In the kit the feather M0 is responsible to communicate with mic for the noise measurements and it sends the data to the feather esp8266 over serial.
+The connect the fetaher M0 to pheripheral devices is necessary to solder:
+* two 1x3 female pin headers on the proto part of the feather, as socket for the mic. See image below for connection.
+* the pin headers: one 1x12 male pin and one 1x16 male pin header, both 2.54mm pitch.
+
+As it is shown in the images below, the socket for the mic is connected to three GPIO pins of the feather M0.
+It is handy to NOT solder the long on these three GPIO pads and keep the pads available for the wires of the mic.
+
+<p align="center"> <img src="images/feather_M0_1.jpg" width="200"> <img src="images/feather_M0_2.jpg" width="200"><br>
+<img src="images/feather_M0_3.jpg" width="200"> <img src="images/feather_M0_4.jpg" width="200"></p>
 
 #### ICS-43432 breakout board
 | <img src="images/mic.jpg" width="300"> ||
