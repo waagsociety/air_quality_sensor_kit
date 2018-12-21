@@ -61,14 +61,19 @@ The [Adafruit Feather HUZZAH ESP8266](https://learn.adafruit.com/adafruit-feathe
 In this application the feather esp8266 is responsible to collect the measurements of the sensors and send them, via WiFi, to the dedicated server.
 When the Wifi network is not available it can save the data on a SD-card, embedded on a different pcb, see section below.
 
-The feather esp8266 requires female stacking headers so it can be plugged on the sensors pcb and it can host, on top, the RTC/SD-card pcb. The headers must be bought separately and they must be solder on the feather esp8266 board. 
+The feather esp8266 requires female stacking headers so it can be plugged on the sensors pcb and it can host, on top, the RTC/SD-card pcb. The headers must be bought separately and they must be solder on the feather esp8266 board.
 
-| <img src="images/feather_esp_1.jpg" width="300"> |<img src="images/feather_esp_2.jpg" width="300"> |
-| ------------- | ------------- |
+<p align="center"> <img src="images/feather_esp_1.jpg" width="200"> <img src="images/feather_esp_2.jpg" width="200"> </p>
 
 #### Adafruit Feather RTC and SD-card
-| <img src="images/sd_rtc.jpg" width="300"> ||
-| ------------- | ------------- |
+The [Adalogger FeatherWing - RTC + SD](https://learn.adafruit.com/adafruit-adalogger-featherwing/overview) is compatible with the feather esp8266 and it features:
+* an I2C real time clock (PCF8523) with 32KHz crystal and battery backup
+* microSD socket that connects to the SPI port pins. A CR1220 coin cell is required to use the RTC battery-backup capabilities.
+
+As for the feather esp8266, it can be used in the kit, with the female stacking headers that don't come with the board but they must be separately bought and soldered.
+
+ <p align="center"> <img src="images/sd_rtc.jpg" width="200"> </p>
+
 
 #### BME280 breakout board
 | <img src="images/bme.jpg" width="300"> ||
