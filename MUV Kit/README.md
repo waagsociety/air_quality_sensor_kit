@@ -124,6 +124,6 @@ The gas sensors require more sophisticated process.
 The workflow for a proper calibration has several steps, depending on the duration of the measurement time. Before placing the sensors in the field, it is necessary to execute a calibration closed to a professional station, the duration depends on the weather conditions, the longer the better, ideally at least 1-2 weeks. After the first calibration the sensors can be placed in the field and during the measurements time the data should be submitted to "on-fly calibration", continuous calibration during the night. At the end of the measuring time or after 6 month, it is recommended to have a second round of calibration at professional station as described above.
 To have more information about the calibration, please see [Contacts](#contacts)
 
-## Contacts (#contacts)
+## Contacts
 You can leave your comments or questions in the issue section of this repo.
 If you have question about calibration, please contact stefano@waag.org
