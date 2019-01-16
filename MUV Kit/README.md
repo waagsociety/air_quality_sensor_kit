@@ -9,7 +9,7 @@ The kit developed for MUV is a modular system on which the following sensors can
 * gases sensors
 
 
-The pcbs used in the kit are both off-the-shelf products and produced in the fablab.
+The pcbs used in the kit are both off-the-shelf products and can be produced in the fablab.
 
 ## Dust sensor
 The dust sensor is the [SDS011](http://aqicn.org/sensor/sds011/) from [inovafitness](http://inovafitness.com/en/a/chanpinzhongxin/95.html) and it uses the principle of laser scattering technology.
@@ -20,14 +20,14 @@ Based on such results we will use the sensor to measure only PM2.5. The communic
 The specifications are:
 - Output: PM2.5, PM10
 - Measuring Range: 0.0-999.9μg/m3
-- Input Voltage:5V
+- Input Voltage: 5V
 - Maximum Current: 100mA
-- Sleep Current:2mA
-- Response Time1 second
+- Sleep Current: 2mA
+- Response Time: 1 second
 - Serial Data Output Frequency: 1 time/second
-- Particle Diameter Resolution:≤0.3μm
-- Relative Error:10%
-- Temperature Range:-20~50°C
+- Particle Diameter Resolution: ≤0.3μm
+- Relative Error: 10%
+- Temperature Range: -20~50°C
 - Physical Size: 71mm*70mm*23mm
 
 The dust sensor doesn't need any support pcb, the cable you get with the sensor can be used to plug the device to the main sensors board, see hardware XXX.
@@ -36,8 +36,8 @@ The dust sensor doesn't need any support pcb, the cable you get with the sensor 
 To measure temperature and humidity, the kit include the [BME280 sensor](https://www.bosch-sensortec.com/bst/products/all_products/bme280).
 <p align="center"><img src="images/bme280_front.jpg" width="200"><img src="images/bme280_back.jpg" width="200"></p>
 The operation ranges are:<br>
-Pressure: 300...1100 hPa<br>
-Temperature: -40…85°C<br>
+Pressure: 300-1100 hPa<br>
+Temperature: -40~85°C<br>
 
 The average current consumption (1Hz data refresh rate) is:<br>
 1.8 μA @ 1 Hz (H, T)<br>
@@ -46,17 +46,17 @@ The average current consumption (1Hz data refresh rate) is:<br>
 and the average current consumption in sleep mode is 0.1 μA.
 
 The Humidity sensor:<br>
-Response time (τ63%): 1 s
-Accuracy tolerance: ± 3 % relative humidity
-Hysteresis: ≤ 2 % relative humidity
+- Response time (τ63%): 1 s
+- Accuracy tolerance: ± 3 % relative humidity
+- Hysteresis: ≤ 2 % relative humidity
 
 The Pressure sensor:<br>
-RMS Noise: 0.2 Pa (equiv. to 1.7 cm)
-Sensitivity Error: ± 0.25 % (equiv. to 1 m at 400 m height change)
-Temperature coefficient offset: ±1.5 Pa/K (equiv. to ±12.6 cm at 1°C temperature change)
+- RMS Noise: 0.2 Pa (equiv. to 1.7 cm)
+- Sensitivity Error: ± 0.25 % (equiv. to 1 m at 400 m height change)
+- Temperature coefficient offset: ±1.5 Pa/K (equiv. to ±12.6 cm at 1°C temperature change)
 
 
-It uses I2C or SPI communication interface, in the kit it adopts the first one.
+It uses I2C or SPI communication interface, in the kit we use the first one.
 
 ## Noise sensor
 The microphone included in the kit is the [ICS‐43432](https://www.invensense.com/wp-content/uploads/2015/02/ICS-43432-data-sheet-v1.3.pdf) from [Invensense](https://www.invensense.com/products/ics-43434/) and it features:
@@ -75,16 +75,17 @@ The microphone included in the kit is the [ICS‐43432](https://www.invensense.c
 * Compatible with Sn/Pb and Pb‐Free Solder Processes  
 * RoHS/WEEE Compliant  
 
-This sensor has its own dedicated mcu that is capable to run 44100 Khz sample frequency and I2S interface. The board is the Adafruit feather M0 basic, see hardware. XXX
+This sensor has its own dedicated mcu that is capable to run 44100 Khz sample frequency and I²S interface. The board is the Adafruit feather M0 basic, see [Hardware](https://github.com/waagsociety/air_quality_sensor_kit/tree/master/MUV%20Kit/Hardware).
 
 ## Gas sensors
-the kit is designed to read up to two electro-chimical sensors from [Alphasense](http://www.alphasense.com/).
+The kit is designed to read up to two electro-chemical sensors from [Alphasense](http://www.alphasense.com/).
 Two are the sensors that are recommended:
 - [Nitrogen dioxide](http://www.alphasense.com/index.php/products/nitrogen-dioxide-2/)
 - [Ozone](http://www.alphasense.com/index.php/products/ozone-2/)
 
 ### NO2 sensor
-The sensor is the NO2-B43F embedded on the [ISB individual sensor board](http://www.alphasense.com/index.php/air/downloads/) from Alphasense.
+The sensor is the NO2-B43F embedded on the [ISB individual sensor board](http://www.alphasense.com/index.php/air/downloads/) from Alphasense. We are also investigating the possibility to have a support circuit for both sensors (instead of having an individual sensor board for each sensor, since this drives the price up_.
+
 <p align="center"><img src="images/no2_front.jpg" width="300"><img src="images/no2_back.jpg" width="300"><img src="images/no2.jpg" width="300">
 </p>
 
@@ -103,8 +104,7 @@ The specifications of sensor are:
 ### O3 sensor
 The [OX-B431](http://www.alphasense.com/WEB1213/wp-content/uploads/2018/12/OXB431.pdf) specifications are:
 - Sensitivity nA/ppm at 1ppm O3 : -200 to -650
-- Response time t90 (s) from zero to 1ppm O3 :
-< 45
+- Response time t90 (s) from zero to 1ppm O3 : < 45
 - Zero current nA in zero air at 20°C : -70 to 70
 - Noise* ±2 standard deviations (ppb equivalent) : 15
 - Range ppm O3 limit of performance warranty : 20
@@ -121,9 +121,9 @@ Also in this case, the sensor in the kit uses the ISB individual sensor board.
 The dust and the gas sensors require a calibration process to validate the data.
 In the case of the dust sensor is recommended to execute the comparison of the SDS011 sensor with professional stations before the employment of the kit in the field of application. <br>
 The gas sensors require more sophisticated process.
-The workflow for a proper calibration has several steps, depending on the duration of the measurement time. Before to place the sensors in the field, it is necessary to execute a calibration closed to a professional station, the duration depends on the weather conditions, it can take up to one month. After the first calibration the sensors can be placed in the field and during the measurements time the data should be submitt to "on-fly calibration", continuous calibration during the night. At the end of the measuring time or after 6 month, it is recommended a second round of calibration at professional station.
-To have more information about the calibration, please see [contacts](Contacts)
+The workflow for a proper calibration has several steps, depending on the duration of the measurement time. Before placing the sensors in the field, it is necessary to execute a calibration closed to a professional station, the duration depends on the weather conditions, the longer the better, ideally at least 1-2 weeks. After the first calibration the sensors can be placed in the field and during the measurements time the data should be submitted to "on-fly calibration", continuous calibration during the night. At the end of the measuring time or after 6 month, it is recommended to have a second round of calibration at professional station as described above.
+To have more information about the calibration, please see [Contacts](#contacts)
 
-## Contacts
+## Contacts (#contacts)
 You can leave your comments or questions in the issue section of this repo.
-If you have question about calibration, please contact: XXX
+If you have question about calibration, please contact stefano@waag.org
