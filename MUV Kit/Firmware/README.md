@@ -48,17 +48,17 @@ Uncomment the block called '//Format FS, reset Wifi settings, for testing':
 
 #### Second and further uploads
 In the Arduino sketch comment the block '//Format FS, reset Wifi settings, for testing':<br>
-//  //Format FS, reset Wifi settings, for testing
-//  Serial.print("Formatting FS...");
-//  SPIFFS.format();
-//  Serial.println("Done.");
-//  Serial.print("Reset WiFi settings...");
-//   wifiManager.resetSettings();  //****
-//  Serial.println("Done.");
-//  while(1) {
-//    delay(1000);
-//    Serial.println("loop..."); //i block the code
-//  }
+//  //Format FS, reset Wifi settings, for testing<br>
+//  Serial.print("Formatting FS...");<br>
+//  SPIFFS.format();<br>
+//  Serial.println("Done.");<br>
+//  Serial.print("Reset WiFi settings...");<br>
+//   wifiManager.resetSettings();  //**** <br>
+//  Serial.println("Done."); <br>
+//  while(1) { <br>
+//    delay(1000); <br>
+//    Serial.println("loop..."); //i block the code <br>
+//  } <br>
 
   Be sure that the information to access the MUV server are correct:
   char mqtt_server[41] = "<my_server>\0";<br>
