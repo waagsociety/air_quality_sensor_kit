@@ -89,9 +89,9 @@ p25: concentration of pm2.5<br>
 p10: concentration of pm10 <br>
 no2op1: op1 output of the NO2 sensor <br>
 no2op2: op2 output of the NO2 sensor <br>
+dB: noise (SPL dB)
 
 The Data uplink happens once every 3 minutes.
-
 
 message: this is the routine that has been triggered, start-up or check <br>
 id: chipID or PK_MUV ID <br>
