@@ -33,16 +33,16 @@ When you upload the code to this board the following requirements are necessary:
 This is a recommendation, the First Upload is not mandatory but it formats the System files in the esp8266 and reset previously saved WiFi settings.
 Uncomment the block called '//Format FS, reset Wifi settings, for testing':
 <br>
-//Format FS, reset Wifi settings, for testing
-  Serial.print("Formatting FS...");
-  SPIFFS.format();
-  Serial.println("Done.");
-  Serial.print("Reset WiFi settings...");
-  wifiManager.resetSettings();  //****
-  Serial.println("Done.");
-  while(1) {
-    delay(1000);
-    Serial.println("loop..."); //i block the code
+//Format FS, reset Wifi settings, for testing<br>
+  Serial.print("Formatting FS...");<br>
+  SPIFFS.format();<br>
+  Serial.println("Done.");<br>
+  Serial.print("Reset WiFi settings...");<br>
+  wifiManager.resetSettings();  //****<br>
+  Serial.println("Done.");<br>
+  while(1) {<br>
+    delay(1000);<br>
+    Serial.println("loop..."); //i block the code<br>
   } <br>
 
 
@@ -70,18 +70,18 @@ In the Arduino sketch comment the block '//Format FS, reset Wifi settings, for t
   To get the MUV credentials and MUV password, please [contact](https://github.com/waagsociety/air_quality_sensor_kit/tree/master/MUV%20Kit#contacts).
 
 #### Uplinks
-The Sensor kit can sends two messages, at the start-up and when the data are ready.
+The Sensor kit can send two messages, at the start-up and when the data are ready.
 
-- Start-up messages:<br> {"message":"startup","id":11705757,"ts":"2019:1:23/15:47:58","location":"Waag","rssi":-47}<br>
+- Start-up message:<br> {"message":"startup","id":11705757,"ts":"2019:1:23/15:47:58","location":"Waag","rssi":-47}<br>
 message: startup <br>
-id: chipID, unique identifier of the esp<br> <br>
+id: chipID, unique identifier of the esp <br>
 ts: timestamp YEAR:MONTH:DAY/HOUR/MINUTE/SECOND <br>
 location: location of the kit, to be inserted during configuration mode <br>
 rssi: rssi <br>
 
 - Data message:<br> {"id":11705757,"ts":"2019:1:2315:49:21","t":22.17,"h":25.4,"p":1002.21,"p25":17.9,"p10":20.7,"no2op1":1291,"no2op2":1196,"dB":61}<br>
-id: chipID, unique identifier of the esp<br> <br>
-ts: timestamp YEAR:MONTH:DAY/HOUR/MINUTE/SECOND <br>
+id: chipID, unique identifier of the esp <br>
+ts: timestamp YY:MM:DD/Hour:Min:Sec <br>
 t: temperature (Celsius)<br>
 h: relative humidity (Percent)<br>
 p: pressure<br>
@@ -92,10 +92,3 @@ no2op2: op2 output of the NO2 sensor <br>
 dB: noise (SPL dB)
 
 The Data uplink happens once every 3 minutes.
-
-message: this is the routine that has been triggered, start-up or check <br>
-id: chipID or PK_MUV ID <br>
-uid: Tag UID <br>
-location: location of the kit, to be inserted during configuration mode <br>
-rssi: rssi <br>
-batt: battery level in % when the devices is using the battery or charging the battery. If the kit is powered by the usb cable, the value "usb"<br>. In the start-up message the batt will be always the value in %.
