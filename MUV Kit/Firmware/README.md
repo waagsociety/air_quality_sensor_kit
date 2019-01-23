@@ -2,7 +2,13 @@ The firmware are two and they are developed in Arduino IDE, version 1.8.5.
 
 ### Code for Feather M0 board
 The code for the Feather M0 is called: "M0_main.ino".
-This tutorial explains how to configure Arduino IDE for the Feather M0;
+This [tutorial](https://learn.adafruit.com/adafruit-feather-m0-adalogger/setup) explains how to configure Arduino IDE for the Feather M0.
+
+The sketch includes the following libraries:
+* ArduinoSound
+* math
+* Arduino
+* wiring_private
 
 
 ### Code for Feather HUZZAH ESP8266 board
@@ -15,7 +21,6 @@ The sketch includes the following libraries:
 * ArduinoJson library: https://github.com/bblanchon/ArduinoJson
 * PubSubClient library: https://github.com/knolleary/pubsubclient
 * Adafruit_NeoPixel library: https://github.com/adafruit/Adafruit_NeoPixel
-* and some others
 
 Change the maximum payload size in the library file "PubSubClient.h": <br>
 '#define MQTT_MAX_PACKET_SIZE 256'<br>
