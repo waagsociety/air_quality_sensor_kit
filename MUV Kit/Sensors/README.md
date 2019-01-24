@@ -13,7 +13,7 @@ The pcbs used in the kit are both off-the-shelf products and can be produced in 
 
 ## Dust sensor
 The dust sensor is the [SDS011](http://aqicn.org/sensor/sds011/) from [inovafitness](http://inovafitness.com/en/a/chanpinzhongxin/95.html) and it uses the principle of laser scattering technology.
-<p align="center"><img src="images/sds011.jpg" width="300"></p>
+<p align="center"><img src="../images/sds011.jpg" width="300"></p>
 The device is capable to measure the concentration of PM2.5, nominally it measures also PM10 but research papers shows the fact that the PM10 measurement is an extrapolation based on PM2.5 data.
 Based on such results we will use the sensor to measure only PM2.5. The communication between the sensor and the main mcu is over serial.
 
@@ -34,7 +34,7 @@ The dust sensor doesn't need any support pcb, the cable you get with the sensor 
 
 ## Temp/Hum/Pressure sensor
 To measure temperature and humidity, the kit include the [BME280 sensor](https://www.bosch-sensortec.com/bst/products/all_products/bme280).
-<p align="center"><img src="images/bme280_front.jpg" width="200"><img src="images/bme280_back.jpg" width="200"></p>
+<p align="center"><img src="../images/bme280_front.jpg" width="200"><img src="../images/bme280_back.jpg" width="200"></p>
 The operation ranges are:<br>
 Pressure: 300-1100 hPa<br>
 Temperature: -40~85°C<br>
@@ -61,7 +61,7 @@ It uses I2C or SPI communication interface, in the kit we use the first one.
 ## Noise sensor
 The microphone included in the kit is the [ICS‐43432](https://www.invensense.com/wp-content/uploads/2015/02/ICS-43432-data-sheet-v1.3.pdf) from [Invensense](https://www.invensense.com/products/ics-43434/) and it features:
 
-<p align="center"><img src="images/ics43432.jpg" width="200"></p>
+<p align="center"><img src="../images/ics43432.jpg" width="200"></p>
 
 * Digital I²S Interface with High Precision 24‐bit Data  
 * High 65 dBA SNR
@@ -86,7 +86,7 @@ Two are the sensors that are recommended:
 ### NO2 sensor
 The sensor is the NO2-B43F embedded on the [ISB individual sensor board](http://www.alphasense.com/index.php/air/downloads/) from Alphasense. We are also investigating the possibility to have a support circuit for both sensors (instead of having an individual sensor board for each sensor, since this drives the price up_.
 
-<p align="center"><img src="images/no2_front.jpg" width="300"><img src="images/no2_back.jpg" width="300"><img src="images/no2.jpg" width="300">
+<p align="center"><img src="../images/no2_front.jpg" width="300"><img src="../images/no2_back.jpg" width="300"><img src="../images/no2.jpg" width="300">
 </p>
 
 The specifications of sensor are:
@@ -98,7 +98,7 @@ The specifications of sensor are:
 - Linearity ppb error at full scale, linear at zero and 5ppm NO2 : < ±0.5
 - Overgas limit maximum ppm for stable response to gas pulse : 50
 
-<p align="center"><img src="images/no2_performances.png">
+<p align="center"><img src="../images/no2_performances.png">
 
 
 ### O3 sensor
@@ -111,7 +111,7 @@ The [OX-B431](http://www.alphasense.com/WEB1213/wp-content/uploads/2018/12/OXB43
 - Linearity ppm error at full scale, linear at zero and 20ppm O3 : < ±0.5
 - Overgas limit maximum ppm for stable response to gas pulse : 50
 
-<p align="center"><img src="images/o3_performances.png">
+<p align="center"><img src="../images/o3_performances.png">
 
 Also in this case, the sensor in the kit uses the ISB individual sensor board.
 
