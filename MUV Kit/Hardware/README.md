@@ -166,7 +166,9 @@ The biggest advantage of this module is the I2S audio as a stream of 24-bit seri
 The SDS011 sensor connects to the sensors pcb with its cable. All the other modules use Grove - Universal 4 Pin Unbuckled 20cm Cable.
 <img src="images/final_assembly.jpg">
 
-### BOM notes
+## Power Supply
+
+## BOM notes
 Many items in the BOM can be bought only in minimum amount, when you actually are going to use one or two component. The total cost is therefore expressed as:
 * total purchase: the cost of the purchase, buying the minimum amount per items
 * cost of 1 kit: considering the cost of only the component used in the kit.
