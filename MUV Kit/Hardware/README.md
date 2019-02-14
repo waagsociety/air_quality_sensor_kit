@@ -4,7 +4,7 @@
 | top view  | bottom view |
 | ------------- | ------------- |
 | <img src="images/sensors_pcb_top_view.png" width="300">| <img src="images/sensors_pcb_bottom_view.png" width="300"> |
-| Components placed on the top layer <br> <img src="images/sensors_pcb_top_components.png" width="300"> <br> JP1: female THT 1x12 pin header, 2.54pitch <br> JP2: female THT 1x16 pin header 2.54pitch <br> J-GAS, J-DB. J-BME : Grove - Universal 4 Pin connector <br> 05-JST-B5B: Connector Wire-To-Board, B5B-XH-A (LF)(SN) <br> traces: jumper wires| Components placed on the bottom layer <br> <img src="images/sensors_pcb_bottom_components.png" width="300"> <br> Q1/Q2 : BSS138 mosfet, also the NDS355AN from the fab inventory is ok. <br> R1/R2/R3/R4 : 10 Kohm <br> <br><br><br><br>|
+| Components placed on the top layer  <br> but solder on the bottom! <br> <img src="images/sensors_pcb_top_components.png" width="300"> <br> JP1: female THT 1x12 pin header, 2.54pitch <br> JP2: female THT 1x16 pin header 2.54pitch <br> J-GAS, J-DB. J-BME : Grove - Universal 4 Pin connector <br> 05-JST-B5B: Connector Wire-To-Board, B5B-XH-A (LF)(SN) <br> red traces: jumper wires between vias| Components placed on the bottom layer <br> and solder on the bottom side <br> <img src="images/sensors_pcb_bottom_components.png" width="300"> <br> Q1/Q2 : BSS138 mosfet, also the NDS355AN from the fab inventory is ok. <br> R1/R2/R3/R4 : 10 Kohm <br> D1/D2 : diodes <br><br>|
 | <img src="images/sensors_pcb_top.jpg" width="300">  | <img src="images/sensors_pcb_bottom.jpg" width="300">|
 
 On the sensors pcb, it is not necessary to use all the connectors.
