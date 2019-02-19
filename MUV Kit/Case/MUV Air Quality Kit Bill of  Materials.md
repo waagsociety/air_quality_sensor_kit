@@ -1,55 +1,53 @@
-MUV Air Quality Kit Documentation
+# Bill of materials/ shopping list
 
+## Hardware: (nuts and bolts etc...)
 
-## **Bill of materials/ shopping list:**
-
-**Hardware: (nuts and bolts etc...)**
-
-Can be purchased at local hardware shops (praxis, gamma for NL for example):
+Can be purchased at local hardware shops (in this instructable I refer to Praxis, Gamma for NL for example):
 
 Its better to buy extra nuts, bolts and washers just in case
 
 
-25 x m3 washers
-50 x m3 nuts
-2 x m6 x 25 hook bolt
-4 x m6 nut
-4 x m6 washer
-4 x m5 x 25mm  bolt
-4 x m5 nut
-4 x m5 washer
-4 x m4.5 wing nut (M4 also fits but looser)
-4 x m4.5 x 30mm wing bolts (m4 also fits but looser)
-4 x m4.5 or m4 washers
-7 x m3 x 30mm bolts
-12 x m3 x 12mm bolts
-4 x m3 x 25mm bolts
-8 x m3 x 15mm bolts
+* 25 x m3 washers
+* 50 x m3 nuts
+* 2 x m6 x 25 hook bolt
+* 4 x m6 nut
+* 4 x m6 washer
+* 4 x m5 x 25mm  bolt
+* 4 x m5 nut
+* 4 x m5 washer
+* 4 x m4.5 wing nut (M4 also fits but looser)
+* 4 x m4.5 x 30mm wing bolts (m4 also fits but looser)
+* 4 x m4.5 or m4 washers
+* 7 x m3 x 30mm bolts
+* 12 x m3 x 12mm bolts
+* 4 x m3 x 25mm bolts
+* 8 x m3 x 15mm bolts
 
-**Weatherproof grommets:** (also available locally in harware shops but much cheaper as part of kits online)
+## Weatherproof grommets
+(also available locally in harware shops but much cheaper as part of kits online)
 
 https://www.amazon.de/Kabeldurchf%C3%BChrung-Sortiment-Kabeldurchlass-Durchgangst%C3%BCllen-Gummit%C3%BClle/dp/B077VYK3H9/ref=sr_1_18?ie=UTF8&qid=1548608255&sr=8-18&keywords=rubber+grommets
 
 
-1 x 19.05mm blind gromet
-1 x 22.23mm blind gromet
-1 x 14.29mm OD 7.94mm ID grommet 
+* 1 x 19.05mm blind gromet
+* 1 x 22.23mm blind gromet
+* 1 x 14.29mm OD 7.94mm ID grommet 
 
-**Acrylic:**
+## Acrylic
 
 500 x 500mm of 3mm acrylic
 
 https://www.kunststofshop.nl/acrylaat-plexiglas/platen/melkwit-wit-en-zwart-standaard-maten/acrylaat-plaat-melkwit-ac02/a-3784-20000029
 
-**Rubber:**
+## Rubber
 
 1/2 of An old inner tube (prefereably used and beyond repair. If really needed you can buy locally)
 
-**Corner supports:**
+## Corner supports
 
 I bought the 2 pairs of corner supports which I used as the balcony clamp from Praxis. They are a standard part but the hole locations may change and will have to be changed in the DXF.
 
-The corner supports are also available locally in Praxis
+The corner supports are also available locally in Praxis.
 
 15cm large corner supports:
 
@@ -59,7 +57,7 @@ https://www.plan-it.be/nl/verf-laminaat-decoratie/raamdecoratie-gordijnen/gordij
 
 https://www.plan-it.be/nl/verf-laminaat-decoratie/raamdecoratie-gordijnen/gordijnrails-roedes/baseline-steunen-wit-'plus'-15-cm-2-stuks/5351540
 
-**Stainless steel Hose Clamps**
+## Stainless steel Hose Clamps
 
 2 x hose clamps
 
