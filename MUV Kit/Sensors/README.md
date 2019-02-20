@@ -30,7 +30,7 @@ The specifications are:
 - Temperature Range: -20~50°C
 - Physical Size: 71mm*70mm*23mm
 
-The dust sensor doesn't need any support pcb, the cable you get with the sensor can be used to plug the device to the main sensors board, see hardware XXX.
+The dust sensor doesn't need any support pcb, the cable you get with the sensor can be used to plug the device to the main sensors board, see [Hardware](https://github.com/waagsociety/air_quality_sensor_kit/tree/master/MUV%20Kit/Hardware).
 
 ## Temp/Hum/Pressure sensor
 To measure temperature and humidity, the kit include the [BME280 sensor](https://www.bosch-sensortec.com/bst/products/all_products/bme280).
@@ -84,7 +84,7 @@ Two are the sensors that are recommended:
 - [Ozone](http://www.alphasense.com/index.php/products/ozone-2/)
 
 ### NO2 sensor
-The sensor is the NO2-B43F embedded on the [ISB individual sensor board](http://www.alphasense.com/index.php/air/downloads/) from Alphasense. We are also investigating the possibility to have a support circuit for both sensors (instead of having an individual sensor board for each sensor, since this drives the price up_.
+The sensor is the NO2-B43F embedded on the [ISB individual sensor board](http://www.alphasense.com/index.php/air/downloads/) from Alphasense. We are also investigating the possibility to have a support circuit for both sensors (instead of having an individual sensor board for each sensor, since this drives the price up).
 
 <p align="center"><img src="../images/no2_front.jpg" width="300"><img src="../images/no2_back.jpg" width="300"><img src="../images/no2.jpg" width="300">
 </p>
