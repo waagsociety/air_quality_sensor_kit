@@ -4,24 +4,28 @@
 
 Can be purchased at local hardware shops (in this instructable I refer to Praxis, Gamma for NL for example):
 
-Its better to buy extra nuts, bolts and washers just in case
+Its better to buy extra nuts, bolts and washers just in case!
 
-
+```
 * 25 x m3 washers
+*  4 x m4.5 or m4 washers
+*  4 x m5 washer
+*  4 x m6 washer
+
 * 50 x m3 nuts
-* 2 x m6 x 25 hook bolt
-* 4 x m6 nut
-* 4 x m6 washer
-* 4 x m5 x 25mm  bolt
-* 4 x m5 nut
-* 4 x m5 washer
-* 4 x m4.5 wing nut (M4 also fits but looser)
-* 4 x m4.5 x 30mm wing bolts (m4 also fits but looser)
-* 4 x m4.5 or m4 washers
-* 7 x m3 x 30mm bolts
+*  4 x m4.5 wing nut (M4 also fits but looser)
+*  4 x m4.5 x 30mm wing bolts (m4 also fits but looser)
+*  4 x m5 nut
+*  4 x m6 nut
+
+*  7 x m3 x 30mm bolts
+*  4 x m5 x 25mm bolt
 * 12 x m3 x 12mm bolts
-* 4 x m3 x 25mm bolts
-* 8 x m3 x 15mm bolts
+*  4 x m3 x 25mm bolts
+*  8 x m3 x 15mm bolts
+
+*  2 x m6 x 25 hook bolt
+```
 
 ## Weatherproof grommets
 (also available locally in harware shops but much cheaper as part of kits online)
