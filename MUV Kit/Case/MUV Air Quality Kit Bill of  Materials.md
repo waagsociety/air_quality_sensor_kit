@@ -37,7 +37,7 @@ Its better to buy extra nuts, bolts and washers just in case!
 ## Weatherproof grommets
 (also available locally in hardware shops but much cheaper as part of kits online)
 
-https://www.amazon.de/Support-durchf%C3%BChrung-Befestigungssatz-Kabeldurchlass-Installationssiegel/dp/B07KK4872C/ref=sr_1_3?ie=UTF8&qid=1551264489&sr=8-3&keywords=grommets+125
+https://www.amazon.de/gp/product/B07DJ5WQ24
 
 * 1 x 19.05mm blind gromet
 * 1 x 22.23mm blind gromet
