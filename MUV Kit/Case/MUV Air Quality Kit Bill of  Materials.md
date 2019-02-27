@@ -1,5 +1,12 @@
 # Bill of materials/ shopping list
 
+## External case
+
+The external case can be bought from Amazon:
+
+https://www.amazon.de/dp/B0151KNMB2/ref=pe_3044161_185740101_TE_item
+
+
 ## Hardware: (nuts and bolts etc...)
 
 Can be purchased at local hardware shops (in this instructable I refer to Praxis, Gamma for NL for example):
@@ -67,6 +74,10 @@ https://www.gamma.nl/assortiment/intensions-practical-basic-steun-rail-u-luxe-st
 Available in local hardware shops, in Schmidt Houthandel in Amsterdam
 
 https://nl.rs-online.com/web/c/fasteners-fixings/clips/hose-jubilee-clips/
+
+## Other items
+
+Superglue
 
 
 
