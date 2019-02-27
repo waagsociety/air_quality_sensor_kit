@@ -69,7 +69,7 @@ https://www.gamma.nl/assortiment/intensions-practical-basic-steun-rail-u-luxe-st
 
 ## Stainless steel Hose Clamps
 
-2 x hose clamps
+2 x hose clamps with a internal diameter suited for rain pipes in your country (we use 130 mm max internal diameter)
 
 Available in local hardware shops, in Schmidt Houthandel in Amsterdam
 
