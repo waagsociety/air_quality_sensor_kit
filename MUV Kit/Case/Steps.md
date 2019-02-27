@@ -7,7 +7,7 @@
 <p align="center"><img src="Images/Steps/MUV Air Quality Kit Instructions-06.jpg" width="100%"><p/>
 <p align="center"><img src="Images/Steps/MUV Air Quality Kit Instructions-07.jpg" width="100%"><p/>
 <p align="center"><img src="Images/Steps/MUV Air Quality Kit Instructions-08.jpg" width="100%"><p/>
-<p align="center"><img src="Images/Steps/MUV Air Quality Kit Instructions-00.jpg" width="100%"><p/>
+<p align="center"><img src="Images/Steps/MUV Air Quality Kit Instructions-09.jpg" width="100%"><p/>
 <p align="center"><img src="Images/Steps/MUV Air Quality Kit Instructions-10.jpg" width="100%"><p/>
 <p align="center"><img src="Images/Steps/MUV Air Quality Kit Instructions-11.jpg" width="100%"><p/>
 <p align="center"><img src="Images/Steps/MUV Air Quality Kit Instructions-12.jpg" width="100%"><p/>
