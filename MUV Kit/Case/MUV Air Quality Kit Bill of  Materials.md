@@ -28,7 +28,7 @@ Its better to buy extra nuts, bolts and washers just in case!
 ```
 
 ## Weatherproof grommets
-(also available locally in harware shops but much cheaper as part of kits online)
+(also available locally in hardware shops but much cheaper as part of kits online)
 
 https://www.amazon.de/Kabeldurchf%C3%BChrung-Sortiment-Kabeldurchlass-Durchgangst%C3%BCllen-Gummit%C3%BClle/dp/B077VYK3H9/ref=sr_1_18?ie=UTF8&qid=1548608255&sr=8-18&keywords=rubber+grommets
 
@@ -51,15 +51,15 @@ https://www.kunststofshop.nl/acrylaat-plexiglas/platen/melkwit-wit-en-zwart-stan
 
 I bought the 2 pairs of corner supports which I used as the balcony clamp from Praxis. They are a standard part but the hole locations may change and will have to be changed in the DXF.
 
-The corner supports are also available locally in Praxis.
+The corner supports are also available locally in Praxis and Gamma.
 
 15cm large corner supports:
 
-https://www.plan-it.be/nl/verf-laminaat-decoratie/raamdecoratie-gordijnen/gordijnrails-roedes/baseline-steunen-wit-'plus'-15-cm-2-stuks/5351540
+https://www.gamma.nl/assortiment/intensions-practical-basic-steun-rail-u-luxe-standaardrail-15-cm-2-stuks/p/B141026
 
 10cm small corner supports:
 
-https://www.plan-it.be/nl/verf-laminaat-decoratie/raamdecoratie-gordijnen/gordijnrails-roedes/baseline-steunen-wit-'plus'-15-cm-2-stuks/5351540
+https://www.gamma.nl/assortiment/intensions-practical-basic-steun-rail-u-luxe-standaardrail-10-cm-2-stuks/p/B141024
 
 ## Stainless steel Hose Clamps
 
