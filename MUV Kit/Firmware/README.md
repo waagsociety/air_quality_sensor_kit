@@ -91,4 +91,9 @@ no2op1: op1 output of the NO2 sensor <br>
 no2op2: op2 output of the NO2 sensor <br>
 dB: noise (SPL dB)
 
+
 The Data uplink happens once every 3 minutes.
+
+## Future development
+
+For the moment the data transmission does not use TLS, this is a possible future development

@@ -135,7 +135,7 @@ It is handy to NOT solder the long on these three GPIO pads and keep the pads av
 #### ICS-43432 breakout board
 The ICS-43432 is the mic used to measure noise, [see](https://github.com/waagsociety/air_quality_sensor_kit/tree/master/MUV%20Kit#Noise%sensor).
 
-Due to the small dimensions, it is handy to work with the breakout board released buy [Arduino](https://store.arduino.cc/ics43432-i2s-digital-microphone). The pcb need two 1x3 male pin headers.
+Due to the small dimensions, it is handy to work with the breakout board released by [Arduino](https://store.arduino.cc/ics43432-i2s-digital-microphone). The pcb need two 1x3 male pin headers.
 The biggest advantage of this module is the I2S audio as a stream of 24-bit serial words that can be directly read by your mcu board with an I2S port. No CODEC is required to decode the audio data!
 
 <p align="center"> <img src="images/mic.jpg" width="300"> </p>
