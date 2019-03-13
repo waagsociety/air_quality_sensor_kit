@@ -167,6 +167,7 @@ The SDS011 sensor connects to the sensors pcb with its cable. All the other modu
 <img src="images/final_assembly.jpg">
 
 ## Power Supply
+The kit is supplied by the micro USB port of the Adafruit Feather esp8266. 
 
 ## BOM notes
 Many items in the BOM can be bought only in minimum amount, when you actually are going to use one or two component. The total cost is therefore expressed as:
