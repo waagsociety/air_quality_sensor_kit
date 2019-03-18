@@ -7,9 +7,9 @@ The external case can be bought from Amazon:
 https://www.amazon.de/dp/B0151KNMB2/ref=pe_3044161_185740101_TE_item
 
 
-## Hardware: (nuts and bolts etc...)
+## Hardware
 
-Can be purchased at local hardware shops (in this instructable I refer to Praxis, Gamma for NL for example):
+Can be purchased at local hardware shops (in this instructable I refer to Praxis, Gamma for NL for example). For some items you can choose between m4.5 or m4, choose consequently the same option for all the choices.
 
 Its better to buy extra nuts, bolts and washers just in case!
 
@@ -20,16 +20,16 @@ Its better to buy extra nuts, bolts and washers just in case!
 *  4 x m6 washer
 
 * 50 x m3 nuts
-*  4 x m4.5 wing nut (M4 also fits but looser)
-*  4 x m4.5 x 30mm wing bolts (m4 also fits but looser)
+*  4 x m4.5 wing nut (m4 also fits but looser)
 *  4 x m5 nut
 *  4 x m6 nut
 
-*  7 x m3 x 30mm bolts
-*  4 x m5 x 25mm bolt
 * 12 x m3 x 12mm bolts
-*  4 x m3 x 25mm bolts
 *  8 x m3 x 15mm bolts
+*  4 x m3 x 25mm bolts
+*  7 x m3 x 30mm bolts
+*  4 x m4.5 x 30mm wing bolts (m4 also fits but looser)
+*  4 x m5 x 25mm bolt
 
 *  2 x m6 x 25 hook bolt
 ```
@@ -69,7 +69,7 @@ https://www.gamma.nl/assortiment/intensions-practical-basic-steun-rail-u-luxe-st
 
 ## Stainless steel Hose Clamps
 
-2 x hose clamps with a internal diameter suited for rain pipes in your country (we use 130 mm max internal diameter)
+2 x hose clamps with a internal diameter suited for rain pipes in your country (we use 120 mm max internal diameter)
 
 Available in local hardware shops, in Schmidt Houthandel in Amsterdam
 
