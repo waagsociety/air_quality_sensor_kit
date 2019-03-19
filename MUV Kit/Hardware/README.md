@@ -5,14 +5,14 @@ The Fab boards are made using the small milling machine Roland Modela MDX-20, ea
 
 Tools used:
 - one side and double side copper plate, FR1
-- to mill the traces: endmill, 0,4mm diameter (or 1/64inch)
-- to cut and drill: endmill, 1/64 inch diameter
+- to mill the traces: endmill, 1/64inch diameter
+- to cut and drill: endmill, 1/32inch diameter
 
 In Fablab Amsterdam the software to generate the rml file and send it to the machine is Fabmodules. It is highly recommended to use the last version of Fabmodules, aka mods http://mods.cba.mit.edu/; previous versions of fabmodules, still work but double check the output of the software before to send the job to the machine, in some cases the path is not well calculated.
 
 In the image below you find the setting to envrage the traces and to drill holes/cut the board.
-<img src="images/config_traces.png" width="400"><br>
-<img src="images/config_outlines.png" width="400">
+<img src="images/config_traces.png" width="500"><br>
+<img src="images/config_outlines.png" width="500">
 
 Note: when you mill the outlines, you will need to trick the fabmodules!! Some holes are two smalls to be identified with a diameter tool of 1/64inch (0.79248mm) so you can set the diameter tool to 0.78mm and all the holes will be milled; yes, you loos some copper on the pad but it is still enough to solder vias and components.
 
@@ -174,8 +174,7 @@ The mic can be replaced by the [Adafruit I2S MEMS Microphone Breakout](https://l
 
 <p align="center"> <img src="images/adafruit_mic.jpg" width="300"> </p>
 
-As with the original module, the Adafruit device uses I2S protocol and the code is compatible with this device. It's important to note that the pins on this module have a different configuration, so be sure about the [connections](https://learn.adafruit.com/adafruit-i2s-mems-microphone-breakout?view=all#arduino-wiring-and-test). Another important difference between the two breakout boards is the location of the microphone hole. With the Adafruit the hole is placed on bottom side of the breakout board!!
-
+As with the original module, the Adafruit device uses I2S protocol and the code is compatible with this device. It's important to note that the pins on this module have a different configuration, so be sure about the [connections](https://learn.adafruit.com/adafruit-i2s-mems-microphone-breakout?view=all#arduino-wiring-and-test). Another important difference between the two breakout boards is the location of the microphone hole. In the Adafruit device, the hole is placed on bottom side of the breakout board!!
 
 
 ## Modules and assembly
