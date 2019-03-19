@@ -1,5 +1,21 @@
 
 ## Fab pcbs
+
+The Fab boards are made using the small milling machine Roland Modela MDX-20, each pcbs requires at least two jobs: mill the trace and cut/drill the boards, in the folder digital files you find the png machinable files. When the pcb is double-side (the components and/or traces are on both side), the jobs are four: [double side milling](https://github.com/waagsociety/air_quality_sensor_kit/tree/master/MUV%20Kit/Hardware/Double%20side%20milling).
+
+Tools used:
+- one side and double side copper plate, FR1
+- to mill the traces: endmill, 0,4mm diameter (or 1/64inch)
+- to cut and drill: endmill, 1/64 inch diameter
+
+In Fablab Amsterdam the software to generate the rml file and send it to the machine is Fabmodules. It is highly recommended to use the last version of Fabmodules, aka mods http://mods.cba.mit.edu/; previous versions of fabmodules, still work but double check the output of the software before to send the job to the machine, in some cases the path is not well calculated.
+
+In the image below you find the setting to envrage the traces and to drill holes/cut the board.
+<img src="images/config_traces.png" width="400"><br>
+<img src="images/config_outlines.png" width="400">
+
+Note: when you mill the outlines, you will need to trick the fabmodules!! Some holes are two smalls to be identified with a diameter tool of 1/64inch (0.79248mm) so you can set the diameter tool to 0.78mm and all the holes will be milled; yes, you loos some copper on the pad but it is still enough to solder vias and components.
+
 #### Sensors pcb
 | top view  | bottom view |
 | ------------- | ------------- |
@@ -140,6 +156,26 @@ The biggest advantage of this module is the I2S audio as a stream of 24-bit seri
 
 <p align="center"> <img src="images/mic.jpg" width="300"> </p>
 
+**Update**<br>
+The breakout board of the ICS-43432 from Arduino is no longer available.
+The mic can be replaced by the [Adafruit I2S MEMS Microphone Breakout](https://learn.adafruit.com/adafruit-i2s-mems-microphone-breakout?view=all). The board has the [sph0645](https://cdn-shop.adafruit.com/product-files/3421/i2S+Datasheet.PDF): <br>
+- High SNR of 65dB(A)
+- Low Current of typ. 600µA
+- I2S Output: Direct attach to µP
+- Multi modes: standard >1MHz,
+- 600uA / sleep <900kHz, 10uA
+- Flat Frequency Response
+- RF Shielded
+- Supports Dual Microphones
+- Ultra-Stable Performance
+- Standard SMD Reflow
+- Omnidirectional
+- Zero-Height Mic™
+
+<p align="center"> <img src="images/adafruit_mic.jpg" width="300"> </p>
+
+As with the original module, the Adafruit device uses I2S protocol and the code is compatible with this device. It's important to note that the pins on this module have a different configuration, so be sure about the [connections](https://learn.adafruit.com/adafruit-i2s-mems-microphone-breakout?view=all#arduino-wiring-and-test). Another important difference between the two breakout boards is the location of the microphone hole. With the Adafruit the hole is placed on bottom side of the breakout board!!
+
 
 
 ## Modules and assembly
@@ -167,7 +203,7 @@ The SDS011 sensor connects to the sensors pcb with its cable. All the other modu
 <img src="images/final_assembly.jpg">
 
 ## Power Supply
-The kit is supplied by the micro USB port of the Adafruit Feather esp8266. 
+The kit is supplied by the micro USB port of the Adafruit Feather esp8266. The ISB adapter must be able to supply at least 1A.
 
 ## BOM notes
 Many items in the BOM can be bought only in minimum amount, when you actually are going to use one or two component. The total cost is therefore expressed as:
