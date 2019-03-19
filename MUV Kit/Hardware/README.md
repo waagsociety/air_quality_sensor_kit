@@ -14,7 +14,7 @@ In the image below you find the setting to envrage the traces and to drill holes
 <img src="images/config_traces.png" width="500"><br>
 <img src="images/config_outlines.png" width="500">
 
-Note: when you mill the outlines, you will need to trick the fabmodules!! Some holes are two smalls to be identified with a diameter tool of 1/64inch (0.79248mm) so you can set the diameter tool to 0.78mm and all the holes will be milled; yes, you loos some copper on the pad but it is still enough to solder vias and components.
+Note: when you mill the outlines, you will need to trick the fabmodules!! Some holes are two smalls to be identified with a diameter tool of 1/64inch (0.79248mm) so you can set the diameter tool to 0.78mm and all the holes will be milled; yes, you lose some copper on the pad but it is still enough to solder vias and components.
 
 #### Sensors pcb
 | top view  | bottom view |
