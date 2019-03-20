@@ -177,7 +177,7 @@ The mic can be replaced by the [Adafruit I2S MEMS Microphone Breakout](https://l
 As with the original module, the Adafruit device uses I2S protocol and the code is compatible with this device. It's important to note that the pins on this module have a different configuration, so be sure about the [connections](https://learn.adafruit.com/adafruit-i2s-mems-microphone-breakout?view=all#arduino-wiring-and-test). Another important difference between the two breakout boards is the location of the microphone hole. In the Adafruit device, the hole is placed on bottom side of the breakout board!!
 
 #### SDS011 Cable
-Dut to a wrong orientation of the connector on the sensors pcb, it is necessary to adjust the cable that comes with sensor so the connectors are well aligned.
+Due to the wrong orientation of the connector on the sensors pcb, it is necessary to adjust the cable that comes with sensor so the connectors are well aligned.
 
 <img src="images/sds_cable_1.jpg" width="150"> <img src="images/sds_cable_2.jpg" width="150"> <img src="images/sds_cable_3.jpg" width="150">
 <img src="images/sds_cable_4.jpg" width="150"> <img src="images/sds_cable_5.jpg" width="150">
