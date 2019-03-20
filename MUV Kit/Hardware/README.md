@@ -179,7 +179,7 @@ As with the original module, the Adafruit device uses I2S protocol and the code 
 #### SDS011 Cable
 Due to the wrong orientation of the connector on the sensors pcb, it is necessary to adjust the cable that comes with sensor so the connectors are well aligned:<br>
 1- cut the cable<br>
-2- rotate one of the extremities<br>
+2- rotate one of the extremities of 180 degrees<br>
 3- solder back the wires using shrink tubes on each wire<br>
 
 <img src="images/sds_cable_1.jpg" width="150"> <img src="images/sds_cable_2.jpg" width="150"> <img src="images/sds_cable_3.jpg" width="150">
