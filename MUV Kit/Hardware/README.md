@@ -1,7 +1,7 @@
 
 
 If you are planning to produce the boards in the fablab you are in the right place. On this page you find instructions that will guide you during the process.
-If you want to save time (and budget) you can download and use the gerber files of the customised boards from [folder](https://github.com/waagsociety/air_quality_sensor_kit/tree/master/MUV%20Kit/Hardware/Gerber%20sfiles).
+If you want to save time (and budget) you can download and use the gerber files of the customised boards from [folder](https://github.com/waagsociety/air_quality_sensor_kit/tree/master/MUV%20Kit/Hardware/Gerber%20files).
 
 ## Fab pcbs
 
