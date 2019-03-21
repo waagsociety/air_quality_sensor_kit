@@ -1,4 +1,8 @@
 
+
+If you are planning to produce the boards in the fablab you are in the right place. On this page you find instructions that will guide you during the process.
+If you want to save time (and budget) you can download and use the gerber files of the customised boards from [folder](https://github.com/waagsociety/air_quality_sensor_kit/tree/master/MUV%20Kit/Hardware/Gerber%20sfiles).
+
 ## Fab pcbs
 
 The Fab boards are made using the small milling machine Roland Modela MDX-20, each pcbs requires at least two jobs: mill the trace and cut/drill the boards, in the folder digital files you find the png machinable files. When the pcb is double-side (the components and/or traces are on both side), the jobs are four: [double side milling](https://github.com/waagsociety/air_quality_sensor_kit/tree/master/MUV%20Kit/Hardware/Double%20side%20milling).

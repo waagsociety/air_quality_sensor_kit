@@ -1,15 +1,23 @@
-The firmware are two and they are developed in Arduino IDE, version 1.8.5.
+The firmwares are three and they are written in Arduino IDE, version 1.8.5.
+1- code to set the measurement period of the sds sensor kit
+2- code for Feather M0 board
+3- code for Feather HUZZAH ESP8266 board
+
+### Code for setting the SDS011
+
+
 
 ### Code for Feather M0 board
 The code for the Feather M0 is called: "M0_main.ino".
 This [tutorial](https://learn.adafruit.com/adafruit-feather-m0-adalogger/setup) explains how to configure Arduino IDE for the Feather M0.
 
 The sketch includes the following libraries:
-* ArduinoSound
-* math
-* Arduino
-* wiring_private
+* ArduinoSound.h: https://github.com/arduino-libraries/ArduinoSound
+* math.h: part of the Arduino IDE Core
+* Arduino.h: part of Arduino IDE Core
+* wiring_private: part of Arduino IDE Core
 
+The code must be uploaded without connecting the grove cable to the sensors pcb.
 
 ### Code for Feather HUZZAH ESP8266 board
 It doesn't include the reading of the Ozone sensor.
@@ -26,7 +34,7 @@ Change the maximum payload size in the library file "PubSubClient.h": <br>
 '#define MQTT_MAX_PACKET_SIZE 256'<br>
 
 When you upload the code to this board the following requirements are necessary:
-- plug in top of the esp board the 'Adalogger FeatherWing RTC + SD' and the 'interface board'
+- plug, on top of the esp board, the 'Adalogger FeatherWing RTC + SD' and the 'interface board'
 - don't connect any other boards to it.
 
 #### First upload
@@ -44,6 +52,8 @@ Uncomment the block called '//Format FS, reset Wifi settings, for testing':
     delay(1000);<br>
     Serial.println("loop..."); //i block the code<br>
   } <br>
+
+Once you upload the code, open the Serial Monitor and when it displays: "loop...", you can proceed with the next step.
 
 
 #### Second and further uploads
