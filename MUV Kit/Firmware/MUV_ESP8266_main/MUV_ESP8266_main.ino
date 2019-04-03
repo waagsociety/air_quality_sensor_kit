@@ -1,14 +1,14 @@
 /*
  * Author: Emma Pareschi
- * Date: Janury 23 2019
+ * Date: March 2019
  * Project MUV
  * Code for Feather HUZZAH ESP8266
+ * Version v0.1
  * 
 */
 
 #define FS_NO_GLOBALS
 #include <FS.h>                   // Make sure ESP library 2.1.0 or higher is installed
-#include <ESP8266WiFi.h>          //https://github.com/esp8266/Arduino
 #include <DNSServer.h>
 #include <ESP8266WebServer.h>
 #include <WiFiManager.h>          //https://github.com/tzapu/WiFiManager
@@ -22,15 +22,21 @@
 
 #include <Adafruit_Sensor.h>
 #include <Adafruit_BME280.h>
-
 #include <Adafruit_ADS1015.h>
 
-  char mqtt_server[41] = "<my_server>\0";<br>
-  char mqtt_portStr[21] = "<my_port>\0";<br>
-  char mqtt_username[21] = "<my_username>\0";<br>
-  char mqtt_password[128] = "<my_password>\0";<br>
-  char mqtt_topic[21] = "<my_topic>\0";<br>
-  char address[41] = "insert address\0";
+// *** SENSORS *** //
+const boolean NOISE = false;
+const boolean NO2  = true;
+const boolean O3 = true;
+const boolean BME = true;
+
+// *** WIFI and SERVER *** //
+char mqtt_server[41] = "mqtt_server\0";
+char mqtt_portStr[21] = "mqtt_portStr\0";
+char mqtt_username[21] = "mqtt_username\0";
+char mqtt_password[128] = "mqtt_password\0";
+char mqtt_topic[21] = "sensor/%u/data\0";
+char address[41] = "insert address\0";
 
 String location = "";
 
@@ -47,7 +53,7 @@ PubSubClient mqttClient(espClient);
 long chipid;
 bool shouldSaveConfig = false;    //flag for saving data
 
-// for Neopixel
+// *** NEOPIXEL *** //
 #include <Adafruit_NeoPixel.h>
 
 #define Pixel_pin            0 //Neopixel pin
@@ -55,7 +61,7 @@ bool shouldSaveConfig = false;    //flag for saving data
 
 byte brightness = 50;
 
-Adafruit_NeoPixel pixels = Adafruit_NeoPixel(1, Pixel_pin, NEO_GRB + NEO_KHZ800);
+Adafruit_NeoPixel pixels = Adafruit_NeoPixel(1, Pixel_pin, NEO_RGB + NEO_KHZ800);
 
 uint32_t red = pixels.Color(255, 0, 0);
 uint32_t green = pixels.Color(0, 255, 0);
@@ -73,7 +79,6 @@ uint32_t magenta = pixels.Color(255, 0, 255);
 // *** RTC *** //
  RTC_PCF8523 rtc;
  String timestamp;
-
 
 // *** BME *** //
 #define SEALEVELPRESSURE_HPA (1013.25)
@@ -96,6 +101,7 @@ int ecnt = 0;
 
 // *** NO2 gas *** //
  Adafruit_ADS1115 ads;  /* Use this for the 16-bit version */
+ Adafruit_ADS1115 ads_o3(0x4A);
 
  int op1 = 0;
  int op2 = 0;
@@ -104,6 +110,13 @@ int ecnt = 0;
  int op1_avg =0;
  int op2_avg =0;
  int gas_count =0;
+
+ int o3_op1 = 0;
+ int o3_op2 = 0;
+ int o3_op1_sum =0;
+ int o3_op2_sum =0;
+ int o3_op1_avg =0;
+ int o3_op2_avg =0;
 
 
 
@@ -121,7 +134,7 @@ boolean collect_data_sensors = false;
 uint8_t status_publish = 0;
 boolean status_write = 0;
 
-#define DEBUG 1
+#define DEBUG 0
 
 //callback notifying us of the need to save config
 void saveConfigCallback () {
@@ -158,26 +171,14 @@ void setup() {
  
  Serial.begin(9600);
  
-  //--------------------------------------------
-//  //Format FS, reset Wifi settings, for testing
-//  Serial.print("Formatting FS...");
-//  SPIFFS.format();
-//  Serial.println("Done.");
-//  Serial.print("Reset WiFi settings...");
-//   wifiManager.resetSettings();  //****
-//  Serial.println("Done.");
-//  while(1) {
-//    delay(1000);
-//    Serial.println("loop..."); //i block the code
-//  }
-  //--------------------------------------------
-
  pinMode(SwConfig_pin, INPUT);
 
   pixels.begin();
+  delay(1);
   pixels.setBrightness(brightness);
-  pixels.setPixelColor(LedConfig, off);
+  pixels.setPixelColor(LedConfig, red);
   pixels.show();
+
 
   //read configuration from FS json
   Serial.println("mounting FS...");
@@ -283,84 +284,41 @@ void setup() {
      
   } 
    
-    Serial.println("CONNECTED"); 
-  
+  Serial.println("CONNECTED"); 
   
   //mqttClient.setServer(mqtt_server, mqtt_port);
   pixels.setPixelColor(LedConfig, green);
   pixels.show();
+  delay(5000);
   chipid = ESP.getChipId();
 
   pixels.setPixelColor(LedConfig, off);
   pixels.show();
 
 
-// ************************** INITIALIZE CARD ** //
-  pinMode(chipSelect, OUTPUT); // chip select pin must be set to OUTPUT mode
-  
-  if (!SD.begin(chipSelect)) { // Initialize SD card
-    Serial.println("Could not initialize SD card."); // if return value is false, something went wrong.
-    return;    
-  } else {
-    Serial.println("");  
-    Serial.println("card initialized.");   
-    Serial.println(""); 
-  }
-
-  int n = 0;
-  snprintf(file_name, sizeof(file_name), "data%03d.txt", n); // includes a three-digit sequence number in the file name
-  
-  while(SD.exists(file_name)) {
-    n++;
-    snprintf(file_name, sizeof(file_name), "data%03d.txt", n);
-  }
-
-  Serial.println("***FILE NAME********************************************************");
-  Serial.println(file_name);
-  Serial.println("");  
-
-
-  // ** Write Log File Header 
-  file = SD.open(file_name, FILE_WRITE); // open "file.txt" to write data
-  if (file)
-  {
-    file.println(" "); //Just a leading blank line, in case there was previous data
-    String header = "Timestamp";
-    file.println("ID,TimeStamp,Temp,Hum,Press,P2.5,PM10,NO2op1,NO2op2,Noise(SPLdB)");
-    file.close();
-    Serial.println("***HEADER***********************************************");
-    Serial.println(header);
-    Serial.println("********************************************************");
-    Serial.println();
-  }
-  else
-  {
-    Serial.println("Couldn't open log file");
-  }
-
   // ************************** INITIALIZE RTC ** //
-  
+
+   Serial.println();
+   Serial.println("***RTC********************************************************");
+   
    if (! rtc.begin()) {
    Serial.println("Couldn't find RTC");
    while (1);
   } else {
+   
    Serial.println("RTC ready ");
    Serial.println("********************************************************");
-   Serial.println();
   }
 
- // uncomment this line to set the RTC to the date & time this sketch was compiled
- // rtc.adjust(DateTime(F(__DATE__), F(__TIME__)));
 
   if (! rtc.initialized()) {
     Serial.println("RTC is NOT running!");
     // following line sets the RTC to the date & time this sketch was compiled
      rtc.adjust(DateTime(F(__DATE__), F(__TIME__)));
-    // This line sets the RTC with an explicit date & time, for example to set
-    // January 21, 2014 at 3am you would call:
-    // rtc.adjust(DateTime(2014, 1, 21, 3, 0, 0));
+     delay(5);
   }  
 
+  
     startup_message();
     Serial.println("********************************************************");
     Serial.println();
@@ -368,8 +326,8 @@ void setup() {
 
 //******** BME **********
     bool status;   
-    // default settings
-    // (you can also pass in a Wire library object like &Wire2)
+  Serial.println("");  
+  Serial.println("***BME280********************************************************");
     status = bme.begin();  
     if (!status) {
         Serial.println("Could not find a valid BME280 sensor, check wiring!");
@@ -382,6 +340,51 @@ void setup() {
 
 // ******* GAS - ADS1115 ********
     ads.begin();
+    ads_o3.begin();
+
+
+// ************************** INITIALIZE CARD ** //
+  pinMode(chipSelect, OUTPUT); // chip select pin must be set to OUTPUT mode
+  Serial.println("");  
+  Serial.println("***SD-CARD********************************************************");
+  if (!SD.begin(chipSelect)) { // Initialize SD card
+    Serial.println("Could not initialize SD card."); // if return value is false, something went wrong.
+    return;    
+  } else {
+    Serial.println("card initialized.");   
+  }
+
+  int n = 0;
+  snprintf(file_name, sizeof(file_name), "data%03d.txt", n); // includes a three-digit sequence number in the file name
+  
+  while(SD.exists(file_name)) {
+    n++;
+    snprintf(file_name, sizeof(file_name), "data%03d.txt", n);
+  }
+
+  Serial.print("file name: ");
+  Serial.println(file_name); 
+
+  // ** Write Log File Header 
+  file = SD.open(file_name, FILE_WRITE); // open "file.txt" to write data
+  if (file)
+  {
+    file.println(" "); //Just a leading blank line, in case there was previous data
+    String header = "ID,TimeStamp,Temp,Hum,Press,P2.5,PM10,NO2op1,NO2op2,O3op1,O3op2,Noise(SPLdB)";
+    file.println("ID,TimeStamp,Temp,Hum,Press,P2.5,PM10,NO2op1,NO2op2,O3op1,O3op2Noise(SPLdB)");
+    file.close();
+    Serial.print("Header: ");
+    Serial.println(header);
+    Serial.println();
+  }
+  else
+  {
+    Serial.println("Couldn't open log file");
+  }
+
+    Serial.println("********************************************************");
+    Serial.println("********************************************************");
+    Serial.println("Start to measure.");
 
   delay(500); //wait before to start
 }
@@ -389,7 +392,8 @@ void setup() {
 
 //function that send the startup message
 void startup_message() {
-
+    Serial.println();
+    Serial.println("***Start-up********************************************************");
    // ** get the timestamp
         DateTime now = rtc.now();
         int YY = now.year();
@@ -406,8 +410,8 @@ void startup_message() {
   snprintf (mqtt_clientid, 14, "ESP%u", chipid);
 
   if (mqttClient.connect(mqtt_clientid, mqtt_username, mqtt_password)) {
+
       Serial.println("MQTT connected.");
-      
       long rssi = WiFi.RSSI();
 
       // send proper JSON startup message
@@ -447,20 +451,27 @@ void loop() {
     ecnt =0;
   } else {
     ecnt++;
-    data_gas1();          //continuosly read the NO2
+    data_gas1();          //continuosly read the gases
     op1_sum += op1;       //sum the readings of NO2
     op2_sum += op2;
+    o3_op1_sum += o3_op1;       //sum the readings of O3
+    o3_op2_sum += o3_op2;
+    
   }
 
+
+//measure only if NOISE is true
+if(NOISE == true){
   // ask to feather M0 for noise
   if (collect_data_sensors) {
    Serial.println(""); 
    Serial.println("NOISE");
    noise_flag = 1;
    request_ok = 0;
+   //noise_dB = 0; //in this way if NOISE is not defined (there is no sensor): noise_dB is set to zero
 
   }
-   
+
   //get the answer from feather M0 within 500ms
   if (noise_flag == 1){  
 
@@ -481,23 +492,22 @@ void loop() {
             noise_flag = 0;
       
           } else {
-
             readStr += c;
             request_ok = 0;
-
           }
        
       }
-  }
+    } 
 
   }
+}
 
-  
+// whatever the noise is measured:
     if (request_ok == 1){ //if the request was ok => reset the flags
         noise_flag = 0;
         request_ok = 0;
     } else {
-        noise_dB = 0;     //if the asnwer from feather M0 is not ok => set the noise to zero
+        noise_dB = 0;     //if the asnwer from feather M0 is not ok => set the noise to zero 
     }
 
   
@@ -521,7 +531,11 @@ void loop() {
     op2_avg = op2_sum/gas_count;            //average the op2
     Serial.print("NO2 op1 avg : "); Serial.println(op1_avg);
     Serial.print("NO2 op2 avg : "); Serial.println(op2_avg);
-    
+
+    o3_op1_avg = o3_op1_sum/gas_count;            //average the op1
+    o3_op2_avg = o3_op2_sum/gas_count;            //average the op2
+    Serial.print("O3 op1 avg : "); Serial.println(o3_op1_avg);
+    Serial.print("O3 op2 avg : "); Serial.println(o3_op2_avg);
 
     Serial.print("Noise (SPLdB) : "); Serial.println(noise_dB);
     Serial.println();
@@ -540,20 +554,23 @@ void loop() {
       pixels.show();
       
     } else {
+      pixels.setPixelColor(LedConfig, orange);
+      pixels.show();
+      delay(1);
       save_data_sdcard(); //if the publish not good => save in sd card
     }
 
     //if it was possible to open the file => blink orange
     if(status_write == true && status_publish == 0){
-      Serial.println("The payload reached the server. yeah");
+      Serial.println("The payload saved on sd-card.");
 
-      pixels.setPixelColor(LedConfig, orange);
-      pixels.show();
-      delay(100);
       pixels.setPixelColor(LedConfig, off);
       pixels.show();
+      delay(100);
+      pixels.setPixelColor(LedConfig, orange);
+      pixels.show();
       
-    } else if (status_write == false && status_publish == 0) { //if there is not card => Led RED and stays red until the next try
+    } else if (status_write == false && status_publish == 0) { //if there is not card => Led orange and stays red until the next try
       pixels.setPixelColor(LedConfig, red);
       pixels.show();
     }
@@ -562,13 +579,23 @@ void loop() {
     op2_avg =0;
     op1_sum=0;
     op2_sum=0;
+    o3_op1_avg =0;
+    o3_op2_avg =0;
+    o3_op1_sum=0;
+    o3_op2_sum=0;
     
     gas_count = ecnt;
     collect_data_sensors = false;         //un-flag collect data
   }
 
+  Serial.print("\tECOUNT= "); Serial.println(ecnt); 
+
   #if DEBUG
-    Serial.print("\tECOUNT= "); Serial.print(ecnt); Serial.print("\tGAS op1= "); Serial.print(op1);  Serial.print("\tGAS op2= "); Serial.println(op2);
+    Serial.print("\tECOUNT= "); Serial.println(ecnt); 
+    Serial.print("\tNO2 op1= "); Serial.print(op1);  
+    Serial.print("\tNO2 op2= "); Serial.print(op2);
+    Serial.print("\tO3 op1= "); Serial.print(o3_op1);  
+    Serial.print("\tO3 op2= "); Serial.println(o3_op2);
   #endif
     
   delay(1000);
@@ -603,6 +630,8 @@ void data_bme(){
   temp = 0.00;
   hum = 0.00;
   pres = 0.00;
+
+  if(BME){ 
   temp = bme.readTemperature();
   hum = bme.readHumidity();
   pres = bme.readPressure() / 100.0F;
@@ -615,6 +644,7 @@ void data_bme(){
 
           pres = round(pres*100);
           pres= pres/100;
+  }
           
 }
 
@@ -713,11 +743,29 @@ void data_sds(){
 }
 
 void data_gas1(){
-  op1 = ads.readADC_Differential_0_1();
-  op2 = ads.readADC_Differential_2_3();
+  if(NO2 == true){
+      op1 = ads.readADC_Differential_0_1();
+      op2 = ads.readADC_Differential_2_3();
+
+    } else {
+      op1 = 0;
+      op2 = 0;
+
+    }
+    
+  if(O3 == true){
+      o3_op1 = ads_o3.readADC_Differential_0_1();
+      o3_op2 = ads_o3.readADC_Differential_2_3();
+  } else {
+      o3_op1 = 0;
+      o3_op2 = 0;
+  }
+  
 }
 
 void send_payload() {
+
+  status_publish = 0;
 
   char mqtt_clientid[15];
   snprintf (mqtt_clientid, 14, "ESP%u", chipid);
@@ -739,8 +787,9 @@ void send_payload() {
       json["p10"] = p10;
       json["no2op1"] = op1_avg;
       json["no2op2"] = op2_avg;
-      json["dB"] = noise_dB;
-//      json["rssi"] = rssi;     
+      json["o3op1"] = o3_op1_avg;
+      json["o3op2"] = o3_op2_avg;
+      json["dB"] = noise_dB; 
       char buf[200];
       json.printTo(buf, sizeof(buf));
 
@@ -764,7 +813,7 @@ void save_data_sdcard(){
   file = SD.open(file_name, FILE_WRITE); // open "file.txt" to write data
   if (file)
   {
-    Serial.println("I opened the log file");
+    Serial.println("Log file opened");
     file.print(chipid); file.print(",");
     file.print(timestamp); file.print(",");
     file.print(temp); file.print(",");
@@ -774,6 +823,8 @@ void save_data_sdcard(){
     file.print(p10); file.print(",");
     file.print(op1_avg); file.print(",");
     file.print(op2_avg); file.print(",");
+    file.print(o3_op1_avg); file.print(",");
+    file.print(o3_op2_avg); file.print(",");
     file.println(noise_dB);
     file.close();
     delay(10);

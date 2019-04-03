@@ -99,12 +99,6 @@ int samples[SAMPLES];
 
 
       } 
-    //int amp_dBSLP = (120 + (20*log10((meanval)/(pow(2,23)-1))));
-    //Serial.println(amp_dBSLP);
-    
-  }
-
- 
 
   
   if (Serial2.available() >0) {
@@ -138,8 +132,7 @@ int samples[SAMPLES];
         readStr[index_string] = c; //makes the string readString
 
       }
-  
-  
+   
 }
   
 }
