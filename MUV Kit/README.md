@@ -5,10 +5,10 @@
 
 This repository is about the Sensors Kit developed for the project [MUV](https://www.muv2020.eu/) and contains the following parts:
 - this page: you will find on this page the instructions on how it works.
-- [Sensors](https://github.com/waagsociety/air_quality_sensor_kit/tree/master/MUV%20Kit/Sensors) folder: contains the list of sensors that can be connected to the Kit.
-- [Hardware](https://github.com/waagsociety/air_quality_sensor_kit/tree/master/MUV%20Kit/Hardware) folder: contains, digital files, original design files, layout view, instruction on how to produce the pcbs in a fablab and BOM.
-- [Firmware](https://github.com/waagsociety/air_quality_sensor_kit/tree/master/MUV%20Kit/Firmware) folder: contains the sketches used in the Kit.
-- [Case](https://github.com/waagsociety/air_quality_sensor_kit/tree/master/MUV%20Kit/Case) folder: contains the instructions for the case.
+- [Sensors](https://github.com/waagsociety/air_quality_sensor_kit/tree/master/MUV%20Kit/Sensors) folder: it contains the list of sensors that can be connected to the Kit.
+- [Hardware](https://github.com/waagsociety/air_quality_sensor_kit/tree/master/MUV%20Kit/Hardware) folder: it contains digital files, original design files, layout view, instruction on how to produce the pcbs in a fablab, gerber files and BOM.
+- [Firmware](https://github.com/waagsociety/air_quality_sensor_kit/tree/master/MUV%20Kit/Firmware) folder: it contains the sketches used in the Kit.
+- [Case](https://github.com/waagsociety/air_quality_sensor_kit/tree/master/MUV%20Kit/Case) folder: it contains the instructions for the case.
 
 ## Intro
 The MUV Sensors kit is a device developed to measure the following environmental quantities:
@@ -49,4 +49,4 @@ Click save and the kit will try to connect to the WiFi, the Led turns green for 
 In case you want to change location or WiFi network, you can enter configuration mode using the Config switch on the interface board: keep pushed the Config switch and reset the kit (press once the reset switch). Hold the Config switch until the Config Led turns blue.
 
 ### Operational mode
-When you power the kit, the Led stays on/red while connecting to the WiFi. If it can't connect, it goes in configuration mode, if it has the right credentials the Led will turn on green for 5 seconds and off. Every time the data are pushed to the cloud, the Led blinks green if the uplink is successful. If the payload can't reach the server, the data are saved on the SD-card and the Led stays on/orange.
+When you power the kit, the Led stays on/red while connecting to the WiFi. If it can't connect, it goes in configuration mode, if it has the right credentials the Led will turn on/green and after 5 seconds it goes off. Every time the data are pushed to the cloud, the Led blinks green if the uplink is successful. If the payload can't reach the server, the data are saved on the SD-card and the Led stays on/orange until the kit is capable to coonect to the server.
