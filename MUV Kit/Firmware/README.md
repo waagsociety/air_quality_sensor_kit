@@ -1,7 +1,7 @@
-The firmwares are three and they are written in Arduino IDE, version 1.8.5.
-1- code to set the measurement period of the sds sensor kit
-2- code for Feather M0 board
-3- code for Feather HUZZAH ESP8266 board
+The firmwares are three and they are written in Arduino IDE, version 1.8.5.<br>
+1- code to set the measurement period of the sds sensor kit<br>
+2- code for Feather M0 board<br>
+3- code for Feather HUZZAH ESP8266 board<br>
 
 ### Code for setting the SDS011
 The data collection is based on the working period of the SDS011.
