@@ -3,7 +3,7 @@
 <p align="center"><img src="images/sensor_kit.jpg" width="500"></p>
 <p align="center"><img src="Hardware/Gerber files/images/MUV_SK.jpg" width="500"></p>
 
-This repository is about the Sensors Kit developed for the project [MUV](https://www.muv2020.eu/) and contains the following parts:
+This repository is about the Sensors Kit developed for the project [MUV](#MUV) and contains the following parts:
 - this page: you will find on this page the instructions on how it works.
 - [Sensors](https://github.com/waagsociety/air_quality_sensor_kit/tree/master/MUV%20Kit/Sensors) folder: it contains the list of sensors that can be connected to the Kit.
 - [Hardware](https://github.com/waagsociety/air_quality_sensor_kit/tree/master/MUV%20Kit/Hardware) folder: it contains digital files, original design files, layout view, instruction on how to produce the pcbs in a fablab, gerber files and BOM.
@@ -51,7 +51,7 @@ In case you want to change the location, you can enter configuration mode using 
 ### Operational mode
 When you power the kit on, the Led stays on/red while connecting to the WiFi. If it can't connect, it goes in configuration mode, if it has the right credentials the Led turns on/green and after 5 seconds it goes off. Every time the data are pushed to the cloud, the Led blinks green if the uplink is successful. If the payload can't reach the server, the Led turns on/orange and the data are saved on the SD-card. If the kit is disconnected from the WiFi and can't save the data on the sd-card, the Led stays on/red.
 
-### Credits
+### MUV
 
 <p align="left"><img src="images/muv-logo-new.png" width="100"></p> 
 
