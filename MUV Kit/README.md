@@ -53,5 +53,5 @@ When you power the kit on, the Led stays on/red while connecting to the WiFi. If
 
 ### Credits
 
-<p align="left"><img src="images/muv-logo-new.png" width="841"></p>
-<p align="left"><img src="images/co-funded-h2020-horiz_en_long.png" width="841"></p>
+<p align="left"><img src="images/muv-logo-new.png" width="100"></p>
+<p align="left"><img src="images/co-funded-h2020-horiz_en_long.png" width="420"></p>
