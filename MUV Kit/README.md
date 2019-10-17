@@ -50,3 +50,8 @@ In case you want to change the location, you can enter configuration mode using 
 
 ### Operational mode
 When you power the kit on, the Led stays on/red while connecting to the WiFi. If it can't connect, it goes in configuration mode, if it has the right credentials the Led turns on/green and after 5 seconds it goes off. Every time the data are pushed to the cloud, the Led blinks green if the uplink is successful. If the payload can't reach the server, the Led turns on/orange and the data are saved on the SD-card. If the kit is disconnected from the WiFi and can't save the data on the sd-card, the Led stays on/red.
+
+### Credits
+
+<p align="left"><img src="images/muv-logo-new.png" width="841"></p>
+<p align="left"><img src="images/co-funded-h2020-horiz_en_long.png" width="841"></p>
