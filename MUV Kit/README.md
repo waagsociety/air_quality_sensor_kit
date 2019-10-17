@@ -53,5 +53,14 @@ When you power the kit on, the Led stays on/red while connecting to the WiFi. If
 
 ### Credits
 
-<p align="left"><img src="images/muv-logo-new.png" width="100"></p>
+<p align="left"><img src="images/muv-logo-new.png" width="100"></p> 
+
+[*MUV* – Mobility Urban Values –](https://www.muv2020.eu) levers behavioural change in local communities using an innovative approach to improve urban mobility: changing citizens’ habits through a game that mixes digital and physical experiences.
+
+Rather than focus on costly and rapidly ageing urban infrastructures, MUV promotes a shift towards more sustainable and healthy mobility choices by engaging in a positive way local communities, local businesses, policymakers and Open Data enthusiasts.
+
+MUV solutions will be open, co-created with a strong learning community of users and stakeholders, and piloted in a set of diverse urban neighbourhoods spread across Europe: Amsterdam (NL), Barcelona (ES), Fundao (PT), Ghent (BE), Helsinki (FI), Palermo (IT).
+
+Mobility and environmental data gathered via the mobile app and the monitoring stations will allow policymakers to enhance planning processes and civic hackers to build new services able to improve cities’ quality of life in a more effective way.
+
 <p align="left"><img src="images/co-funded-h2020-horiz_en_long.png" width="420"></p>
