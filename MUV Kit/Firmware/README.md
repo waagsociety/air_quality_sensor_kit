@@ -138,7 +138,8 @@ rssi: rssi <br>
 
 - Data message:
 ```
-{"id":1340471,"ts":"2019-10-25T15:40:05","t":23.27,"h":35.4,"p":1001.02,"p25":9.7,"p10":13.8,"no2op1":1057,"no2op2":1100,"o3op1":1567,"o3op2":1457}```
+{"id":1340471,"ts":"2019-10-25T15:40:05","t":23.27,"h":35.4,"p":1001.02,"p25":9.7,"p10":13.8,"no2op1":1057,"no2op2":1100,"o3op1":1567,"o3op2":1457}
+```
 
 id: chipID, unique identifier of the esp <br>
 ts: timestamp in ISO 8601 format: YEAR-MONTH-DAY T HOUR:MINUTE:SECOND <br>
