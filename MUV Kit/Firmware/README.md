@@ -83,7 +83,7 @@ The format of this file is as follows:
   "address":"sensor street address",
   "firmware_server":"firmware host",
   "firmware_port":"firmware port",
-  "firmware_path":"/esp/update/index.php",
+  "firmware_path":"/ota",
   "sensor_no2":"True",
   "sensor_o3":"False",
   "sensor_bme":"True"  }
